@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kiddytunes/screens/onboard/onboard1.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -9,13 +10,30 @@ class Splashscreen extends StatefulWidget {
 
 class _SplashscreenState extends State<Splashscreen> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  void loader() {
+    Future.delayed(
+      const Duration(seconds: 7),
+      () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const OnboardOne(),
+        ),
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(
-            height: 70,
+            height: 350,
           ),
           Center(
             child: SizedBox(
