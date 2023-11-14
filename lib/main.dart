@@ -3,6 +3,7 @@ import 'package:kiddytunes/app_theme/theme.dart';
 import 'package:kiddytunes/screens/splashscreen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,

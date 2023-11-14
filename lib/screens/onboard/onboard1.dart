@@ -10,8 +10,9 @@ class OnboardOne extends StatefulWidget {
 class _OnboardOneState extends State<OnboardOne> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Placeholder(),
+    return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
+      body: const Placeholder(),
     );
   }
 }

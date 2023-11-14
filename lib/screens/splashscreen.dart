@@ -12,6 +12,7 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
+    loader();
   }
 
   void loader() {
@@ -37,9 +38,12 @@ class _SplashscreenState extends State<Splashscreen> {
           ),
           Center(
             child: SizedBox(
-                height: 100,
-                width: 100,
+                height: 150,
+                width: 150,
                 child: Image.asset('assets/images/kt_logo.png')),
+          ),
+          const SizedBox(
+            height: 70,
           ),
           Padding(
             padding: const EdgeInsets.all(10),
@@ -49,9 +53,12 @@ class _SplashscreenState extends State<Splashscreen> {
             ),
           ),
           SizedBox(
-            width: 70,
+            width: 100,
+            height: 7,
             child: LinearProgressIndicator(
-              color: Theme.of(context).primaryColor,
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              backgroundColor: Theme.of(context).primaryColor,
             ),
           ),
         ],
