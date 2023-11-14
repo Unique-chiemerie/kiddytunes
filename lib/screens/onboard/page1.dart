@@ -18,10 +18,18 @@ class Page1 extends StatelessWidget {
             ),
             child: Column(
               children: [
+                const SizedBox(
+                  height: 70,
+                ),
                 SizedBox(
                   height: 236,
                   width: 190,
-                  child: Image.asset('assets/images/dancer.png'),
+                  child: Center(
+                    child: Image.asset('assets/images/dancer.png'),
+                  ),
+                ),
+                const SizedBox(
+                  height: 50,
                 ),
                 Text(
                   'Enjoy over 50 children songs',

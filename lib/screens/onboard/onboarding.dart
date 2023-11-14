@@ -51,28 +51,67 @@ class _OnboardOneState extends State<OnboardOne> {
                 //dot indicator
                 Padding(
                   padding: const EdgeInsets.all(20),
-                  child: SmoothPageIndicator(controller: _controller, count: 3),
+                  child: SmoothPageIndicator(
+                    controller: _controller,
+                    count: 3,
+                    effect: const ExpandingDotsEffect(
+                        activeDotColor: Colors.white, dotColor: Colors.grey),
+                  ),
                 ),
                 //next or done
                 onLastpage
-                    ? GestureDetector(
-                        onTap: () {
-                          Navigator.push(
+                    ? SizedBox(
+                        width: 197,
+                        height: 52,
+                        child: MaterialButton(
+                          onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => const Avatar(),
                             ),
-                          );
-                        },
-                        child: const Text('Done'),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          color: Colors.white,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Done',
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                            ],
+                          ),
+                        ),
                       )
-                    : GestureDetector(
-                        onTap: () {
-                          _controller.nextPage(
-                              duration: const Duration(milliseconds: 300),
-                              curve: Curves.easeIn);
-                        },
-                        child: const Text('Next'),
+                    : SizedBox(
+                        width: 197,
+                        height: 52,
+                        child: MaterialButton(
+                          onPressed: () {
+                            _controller.nextPage(
+                                duration: const Duration(milliseconds: 300),
+                                curve: Curves.easeIn);
+                          },
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          color: Colors.white,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Get started',
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                              const Icon(
+                                Icons.keyboard_arrow_right_outlined,
+                                size: 50,
+                              ),
+                            ],
+                          ),
+                        ),
                       )
               ],
             ),

@@ -64,6 +64,8 @@ flutter:
   assets:
     - assets/images/kt_logo.png
     - assets/images/dancer.png
+    - assets/images/headphones.png
+    - assets/images/love.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

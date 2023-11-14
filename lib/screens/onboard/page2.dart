@@ -6,13 +6,39 @@ class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400,
-      width: 350,
-      child: Container(
-        height: 400,
-        width: 350,
-        margin: const EdgeInsets.all(20),
-        color: Colors.yellow,
+      child: Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.all(20),
+            height: 432,
+            width: 350,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 100,
+                ),
+                SizedBox(
+                  height: 95,
+                  width: 95,
+                  child: Center(
+                    child: Image.asset('assets/images/headphones.png'),
+                  ),
+                ),
+                const SizedBox(
+                  height: 130,
+                ),
+                Text(
+                  'Play the tunes of \n selected songs',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
