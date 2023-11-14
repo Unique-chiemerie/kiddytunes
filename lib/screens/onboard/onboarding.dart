@@ -20,7 +20,6 @@ class _OnboardOneState extends State<OnboardOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
       body: Stack(
         children: [
           //page view
@@ -73,7 +72,7 @@ class _OnboardOneState extends State<OnboardOne> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          color: Colors.white,
+                          color: Theme.of(context).primaryColor,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -97,7 +96,7 @@ class _OnboardOneState extends State<OnboardOne> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          color: Colors.white,
+                          color: Theme.of(context).primaryColor,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
