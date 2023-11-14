@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiddytunes/screens/onboard/onboard1.dart';
+import 'package:kiddytunes/screens/onboard/onboarding.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
