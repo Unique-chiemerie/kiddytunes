@@ -18,9 +18,19 @@ class _SplashscreenState extends State<Splashscreen> {
             height: 70,
           ),
           Center(
-            child: Image.asset('assets/images/kt_logo.png'),
+            child: SizedBox(
+                height: 100,
+                width: 100,
+                child: Image.asset('assets/images/kt_logo.png')),
           ),
-          const LinearProgressIndicator(),
+          const Padding(
+            padding: EdgeInsets.all(10),
+            child: Text('Loading...'),
+          ),
+          const SizedBox(
+            width: 70,
+            child: LinearProgressIndicator(),
+          ),
         ],
       ),
     );
