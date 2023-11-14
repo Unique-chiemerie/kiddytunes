@@ -13,7 +13,7 @@ class Page1 extends StatelessWidget {
             height: 432,
             width: 350,
             decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(30),
             ),
             child: Column(
