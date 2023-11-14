@@ -41,13 +41,18 @@ class _SplashscreenState extends State<Splashscreen> {
                 width: 100,
                 child: Image.asset('assets/images/kt_logo.png')),
           ),
-          const Padding(
-            padding: EdgeInsets.all(10),
-            child: Text('Loading...'),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Text(
+              'Loading...',
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
           ),
-          const SizedBox(
+          SizedBox(
             width: 70,
-            child: LinearProgressIndicator(),
+            child: LinearProgressIndicator(
+              color: Theme.of(context).primaryColor,
+            ),
           ),
         ],
       ),
