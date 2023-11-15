@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kiddytunes/app_theme/avatar_card.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
+import 'package:kiddytunes/screens/avatar_name/name_entry.dart';
 
 class Avatar extends StatefulWidget {
   const Avatar({super.key});
@@ -88,7 +88,18 @@ class _AvatarState extends State<Avatar> {
               width: 197,
               height: 52,
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    selectedindex = _controller.page?.round() ?? 0;
+                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          Namesscreen(selectedindex: selectedindex),
+                    ),
+                  );
+                },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
