@@ -28,9 +28,15 @@ class _AvatarState extends State<Avatar> {
             child: PageView(
               controller: _controller,
               children: const [
-                Avatarcard(),
-                Avatarcard(),
-                Avatarcard(),
+                Avatarcard(
+                  imagepath: 'assets/images/avatar1.png',
+                ),
+                Avatarcard(
+                  imagepath: 'assets/images/avatar1.png',
+                ),
+                Avatarcard(
+                  imagepath: 'assets/images/avatar1.png',
+                ),
               ],
             ),
           ),
@@ -59,7 +65,7 @@ class _AvatarState extends State<Avatar> {
                 onPressed: () {
                   _controller.nextPage(
                       duration: const Duration(seconds: 1),
-                      curve: Curves.easeInQuart);
+                      curve: Curves.elasticOut);
                 },
                 icon: const Icon(
                   Icons.keyboard_arrow_right_sharp,
@@ -78,7 +84,28 @@ class _AvatarState extends State<Avatar> {
                 .textTheme
                 .bodyLarge!
                 .copyWith(color: Colors.white),
-          )
+          ),
+          //the button for choosing
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: SizedBox(
+              width: 197,
+              height: 52,
+              child: MaterialButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                color: Colors.white,
+                child: Center(
+                  child: Text(
+                    'Choose',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

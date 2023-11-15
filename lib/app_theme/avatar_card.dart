@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Avatarcard extends StatelessWidget {
-  const Avatarcard({super.key});
+  const Avatarcard({super.key, required this.imagepath});
+  final String imagepath;
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +13,11 @@ class Avatarcard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromARGB(70, 255, 255, 255),
+      ),
+      child: SizedBox(
+        height: 150,
+        width: 110,
+        child: Image.asset(imagepath),
       ),
     );
   }
