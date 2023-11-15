@@ -58,7 +58,11 @@ class Namesscreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        splashColor: Colors.white,
         onPressed: () {},
+        child: SvgPicture.asset('assets/images/next.svg'),
       ),
     );
   }
