@@ -32,10 +32,13 @@ class _AvatarState extends State<Avatar> {
                   imagepath: 'assets/images/Avatar1.svg',
                 ),
                 Avatarcard(
-                  imagepath: 'assets/images/Avatar1.svg',
+                  imagepath: 'assets/images/Avatar2.svg',
                 ),
                 Avatarcard(
-                  imagepath: 'assets/images/Avatar1.svg',
+                  imagepath: 'assets/images/Avatar3.svg',
+                ),
+                Avatarcard(
+                  imagepath: 'assets/images/Avatar4.svg',
                 ),
               ],
             ),
