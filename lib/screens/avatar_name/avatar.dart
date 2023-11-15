@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:kiddytunes/app_theme/avatar_card.dart';
 
-class Avatar extends StatelessWidget {
+class Avatar extends StatefulWidget {
   const Avatar({super.key});
 
+  @override
+  State<Avatar> createState() => _AvatarState();
+}
+
+class _AvatarState extends State<Avatar> {
+  final PageController _controller = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,10 +20,18 @@ class Avatar extends StatelessWidget {
           const SizedBox(
             height: 60,
           ),
-          const SizedBox(
+          //avatar selections
+          SizedBox(
             height: 400,
             width: 350,
-            child: Placeholder(),
+            child: PageView(
+              controller: _controller,
+              children: const [
+                Avatarcard(),
+                Avatarcard(),
+                Avatarcard(),
+              ],
+            ),
           ),
           const SizedBox(
             height: 50,
@@ -25,7 +40,11 @@ class Avatar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  _controller.nextPage(
+                      duration: const Duration(seconds: 2),
+                      curve: Curves.bounceIn);
+                },
                 icon: const Icon(
                   Icons.keyboard_arrow_left,
                   color: Colors.white,
@@ -36,7 +55,11 @@ class Avatar extends StatelessWidget {
                 width: 30,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  _controller.previousPage(
+                      duration: const Duration(seconds: 2),
+                      curve: Curves.bounceIn);
+                },
                 icon: const Icon(
                   Icons.keyboard_arrow_right_sharp,
                   color: Colors.white,
