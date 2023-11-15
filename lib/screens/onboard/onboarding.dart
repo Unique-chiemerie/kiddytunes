@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiddytunes/screens/avatar_name/avatar.dart';
+import 'package:kiddytunes/screens/avatar_name/avatar_select.dart';
 import 'package:kiddytunes/screens/onboard/page1.dart';
 import 'package:kiddytunes/screens/onboard/page2.dart';
 import 'package:kiddytunes/screens/onboard/page3.dart';

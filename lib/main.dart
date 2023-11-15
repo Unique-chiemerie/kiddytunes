@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiddytunes/app_theme/theme.dart';
-import 'package:kiddytunes/screens/splashscreen.dart';
+import 'package:kiddytunes/screens/splash/splashscreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
