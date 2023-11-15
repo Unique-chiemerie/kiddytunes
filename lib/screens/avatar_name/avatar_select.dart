@@ -29,13 +29,13 @@ class _AvatarState extends State<Avatar> {
               controller: _controller,
               children: const [
                 Avatarcard(
-                  imagepath: 'assets/images/avatar1.png',
+                  imagepath: 'assets/images/Avatar1.svg',
                 ),
                 Avatarcard(
-                  imagepath: 'assets/images/avatar1.png',
+                  imagepath: 'assets/images/Avatar1.svg',
                 ),
                 Avatarcard(
-                  imagepath: 'assets/images/avatar1.png',
+                  imagepath: 'assets/images/Avatar1.svg',
                 ),
               ],
             ),

@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   smooth_page_indicator: ^1.1.0
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +67,7 @@ flutter:
     - assets/images/dancer.png
     - assets/images/headphones.png
     - assets/images/love.png
-    - assets/images/avatar1.png
+    - assets/images/Avatar1.svg
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

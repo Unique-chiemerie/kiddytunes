@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Avatarcard extends StatelessWidget {
   const Avatarcard({super.key, required this.imagepath});
@@ -17,7 +18,7 @@ class Avatarcard extends StatelessWidget {
       child: SizedBox(
         height: 150,
         width: 110,
-        child: Image.asset(imagepath),
+        child: SvgPicture.asset(imagepath),
       ),
     );
   }
