@@ -41,9 +41,9 @@ class _AvatarState extends State<Avatar> {
             children: [
               IconButton(
                 onPressed: () {
-                  _controller.nextPage(
-                      duration: const Duration(seconds: 2),
-                      curve: Curves.bounceIn);
+                  _controller.previousPage(
+                      duration: const Duration(seconds: 1),
+                      curve: Curves.elasticOut);
                 },
                 icon: const Icon(
                   Icons.keyboard_arrow_left,
@@ -56,9 +56,9 @@ class _AvatarState extends State<Avatar> {
               ),
               IconButton(
                 onPressed: () {
-                  _controller.previousPage(
-                      duration: const Duration(seconds: 2),
-                      curve: Curves.bounceIn);
+                  _controller.nextPage(
+                      duration: const Duration(seconds: 1),
+                      curve: Curves.easeInQuart);
                 },
                 icon: const Icon(
                   Icons.keyboard_arrow_right_sharp,
