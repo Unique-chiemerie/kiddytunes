@@ -13,6 +13,10 @@ class Namesscreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const SizedBox(
+            height: 70,
+          ),
+          //the avatar
           Center(
             child: Container(
               margin: const EdgeInsets.all(10),
@@ -20,6 +24,34 @@ class Namesscreen extends StatelessWidget {
               width: 100,
               child: SvgPicture.asset(
                 avatarstrings[selectedindex],
+              ),
+            ),
+          ),
+          //the text field
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              'Enter your name',
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge!
+                  .copyWith(color: Colors.white),
+            ),
+          ),
+          //the text field
+          SizedBox(
+            height: 64,
+            width: 274,
+            child: TextField(
+              decoration: InputDecoration(
+                fillColor: Colors.white,
+                filled: true,
+                hintText: 'Brandon',
+                hintStyle: const TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
             ),
           ),
