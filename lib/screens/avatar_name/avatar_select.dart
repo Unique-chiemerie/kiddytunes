@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiddytunes/app_theme/avatar_card.dart';
+import 'package:kiddytunes/data/avatarlis.dart';
 
 class Avatar extends StatefulWidget {
   const Avatar({super.key});
@@ -27,19 +28,11 @@ class _AvatarState extends State<Avatar> {
             width: 350,
             child: PageView(
               controller: _controller,
-              children: const [
-                Avatarcard(
-                  imagepath: 'assets/images/Avatar1.svg',
-                ),
-                Avatarcard(
-                  imagepath: 'assets/images/Avatar2.svg',
-                ),
-                Avatarcard(
-                  imagepath: 'assets/images/Avatar3.svg',
-                ),
-                Avatarcard(
-                  imagepath: 'assets/images/Avatar4.svg',
-                ),
+              children: [
+                avatars[0],
+                avatars[1],
+                avatars[2],
+                avatars[3],
               ],
             ),
           ),
