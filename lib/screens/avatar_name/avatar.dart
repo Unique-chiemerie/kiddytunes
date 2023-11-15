@@ -9,6 +9,7 @@ class Avatar extends StatefulWidget {
 }
 
 class _AvatarState extends State<Avatar> {
+  int selectedindex = 0;
   final PageController _controller = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
