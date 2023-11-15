@@ -15,10 +15,10 @@ class Avatarcard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: const Color.fromARGB(70, 255, 255, 255),
       ),
-      child: SizedBox(
+      child: SvgPicture.asset(
+        imagepath,
         height: 150,
         width: 110,
-        child: SvgPicture.asset(imagepath),
       ),
     );
   }
