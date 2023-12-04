@@ -61,7 +61,9 @@ class Namesscreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         splashColor: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, '/home');
+        },
         child: SvgPicture.asset('assets/images/next.svg'),
       ),
     );

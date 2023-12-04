@@ -42,78 +42,80 @@ class _OnboardOneState extends State<OnboardOne> {
           //dot indicator
           Container(
             alignment: const Alignment(0, 0.75),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 600,
-                ),
-                //dot indicator
-                Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: SmoothPageIndicator(
-                    controller: _controller,
-                    count: 3,
-                    effect: const ExpandingDotsEffect(
-                        activeDotColor: Colors.white, dotColor: Colors.grey),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    height: 600,
                   ),
-                ),
-                //next or done
-                onLastpage
-                    ? SizedBox(
-                        width: 197,
-                        height: 52,
-                        child: MaterialButton(
-                          onPressed: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Avatar(),
+                  //dot indicator
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: SmoothPageIndicator(
+                      controller: _controller,
+                      count: 3,
+                      effect: const ExpandingDotsEffect(
+                          activeDotColor: Colors.white, dotColor: Colors.grey),
+                    ),
+                  ),
+                  //next or done
+                  onLastpage
+                      ? SizedBox(
+                          width: 197,
+                          height: 52,
+                          child: MaterialButton(
+                            onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Avatar(),
+                              ),
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            color: Colors.white,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Done',
+                                  style: Theme.of(context).textTheme.bodyLarge,
+                                ),
+                              ],
                             ),
                           ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
+                        )
+                      : SizedBox(
+                          width: 197,
+                          height: 52,
+                          child: MaterialButton(
+                            onPressed: () {
+                              _controller.nextPage(
+                                  duration: const Duration(milliseconds: 300),
+                                  curve: Curves.easeIn);
+                            },
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            color: Colors.white,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Get started',
+                                  style: Theme.of(context).textTheme.bodyLarge,
+                                ),
+                                const Icon(
+                                  Icons.keyboard_arrow_right_outlined,
+                                  size: 30,
+                                ),
+                              ],
+                            ),
                           ),
-                          color: Colors.white,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Done',
-                                style: Theme.of(context).textTheme.bodyLarge,
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
-                    : SizedBox(
-                        width: 197,
-                        height: 52,
-                        child: MaterialButton(
-                          onPressed: () {
-                            _controller.nextPage(
-                                duration: const Duration(milliseconds: 300),
-                                curve: Curves.easeIn);
-                          },
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          color: Colors.white,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Get started',
-                                style: Theme.of(context).textTheme.bodyLarge,
-                              ),
-                              const Icon(
-                                Icons.keyboard_arrow_right_outlined,
-                                size: 50,
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
-              ],
+                        )
+                ],
+              ),
             ),
           ),
         ],
