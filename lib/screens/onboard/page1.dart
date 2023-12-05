@@ -31,9 +31,11 @@ class Page1 extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
-                Text(
-                  'Enjoy over 50 children songs',
-                  style: Theme.of(context).textTheme.bodyLarge,
+                Center(
+                  child: Text(
+                    'Enjoy over 50 children songs',
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
                 ),
               ],
             ),
