@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
+import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -12,8 +13,23 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
+    int selected = 1;
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+//sliding controller logic
+    Widget _buildscreen() {
+      if (selected == 1) {
+        return const Center(
+          child: Text('All songs'),
+        );
+      } else if (selected == 2) {
+        return const Center(
+          child: Text('Favourited'),
+        );
+      }
+      return const Placeholder();
+    }
+
     return SafeArea(
       child: Scaffold(
         body: ListView(
@@ -79,7 +95,7 @@ class _HomescreenState extends State<Homescreen> {
                           .copyWith(fontSize: screenWidth * 0.06),
                     ),
                     SizedBox(
-                      width: screenWidth * 0.25,
+                      width: screenWidth * 0.20,
                     ),
                     const Spacer(),
                     //the music svg
@@ -122,25 +138,35 @@ class _HomescreenState extends State<Homescreen> {
                       ),
                     ),
                     hintText: 'Search songs',
-                    hintStyle:
-                        const TextStyle(color: Colors.white, fontSize: 14),
+                    hintStyle: TextStyle(
+                        color: Colors.white, fontSize: screenWidth * 0.05),
                   ),
                   cursorColor: Theme.of(context).primaryColor,
                   enableSuggestions: true,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: screenHeight * 0.06,
-                width: screenWidth * 0.4,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
+            //the slidable tab
+            CustomSlidingSegmentedControl(
+              initialValue: 1,
+              children: const {
+                1: Text('Songs'),
+                2: Text('Favourites'),
+              },
+              decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                ),
+                  color: Theme.of(context).primaryColor),
+              thumbDecoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
               ),
+              onValueChanged: (value) {
+                setState(() {
+                  selected = value;
+                });
+              },
             ),
+
             const SizedBox(
               height: 50,
             ),
@@ -150,9 +176,7 @@ class _HomescreenState extends State<Homescreen> {
               child: SizedBox(
                 height: screenHeight * 0.6,
                 width: double.infinity,
-                child: const Placeholder(
-                  color: Colors.orange,
-                ),
+                child: _buildscreen(),
               ),
             ),
           ],
