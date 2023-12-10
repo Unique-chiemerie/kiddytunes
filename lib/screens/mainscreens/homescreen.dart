@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
+import 'package:kiddytunes/screens/mainscreens/all_songs.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -11,24 +12,23 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
+  int selected = 1;
+//sliding controller logic
+  Widget buildscreen() {
+    if (selected == 1) {
+      return const Allsongsscreen();
+    } else if (selected == 2) {
+      return const Center(
+        child: Text('Favourited'),
+      );
+    }
+    return const Placeholder();
+  }
+
   @override
   Widget build(BuildContext context) {
-    int selected = 1;
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-//sliding controller logic
-    Widget _buildscreen() {
-      if (selected == 1) {
-        return const Center(
-          child: Text('All songs'),
-        );
-      } else if (selected == 2) {
-        return const Center(
-          child: Text('Favourited'),
-        );
-      }
-      return const Placeholder();
-    }
 
     return SafeArea(
       child: Scaffold(
@@ -147,24 +147,69 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
             //the slidable tab
-            CustomSlidingSegmentedControl(
-              initialValue: 1,
-              children: const {
-                1: Text('Songs'),
-                2: Text('Favourites'),
-              },
-              decoration: BoxDecoration(
+            Center(
+              child: CustomSlidingSegmentedControl(
+                initialValue: 1,
+                children: {
+                  //The songs icon
+                  1: Row(
+                    children: [
+                      Text(
+                        'Songs',
+                        style: TextStyle(
+                          fontSize: screenWidth * 0.05,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        width: screenWidth * 0.05,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: screenHeight * 0.05,
+                          width: screenWidth * 0.07,
+                          child: Image.asset('assets/images/music_logo.png'),
+                        ),
+                      ),
+                    ],
+                  ),
+                  //The favourited icon
+                  2: Row(
+                    children: [
+                      Text(
+                        'Favourites',
+                        style: TextStyle(
+                          fontSize: screenWidth * 0.05,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          height: screenHeight * 0.05,
+                          width: screenWidth * 0.05,
+                          child: Image.asset('assets/images/heart_icon.png'),
+                        ),
+                      ),
+                    ],
+                  ),
+                },
+                height: screenHeight * 0.06,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Theme.of(context).primaryColor),
+                fixedWidth: screenWidth * 0.4,
+                thumbDecoration: BoxDecoration(
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  color: Theme.of(context).primaryColor),
-              thumbDecoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(15),
+                ),
+                onValueChanged: (value) {
+                  setState(() {
+                    selected = value;
+                  });
+                },
               ),
-              onValueChanged: (value) {
-                setState(() {
-                  selected = value;
-                });
-              },
             ),
 
             const SizedBox(
@@ -176,7 +221,7 @@ class _HomescreenState extends State<Homescreen> {
               child: SizedBox(
                 height: screenHeight * 0.6,
                 width: double.infinity,
-                child: _buildscreen(),
+                child: buildscreen(),
               ),
             ),
           ],

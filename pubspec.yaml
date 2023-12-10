@@ -75,6 +75,8 @@ flutter:
     - assets/images/next.svg
     - assets/images/music_icon.svg
     - assets/images/stylish_search.svg
+    - assets/images/heart_icon.png
+    - assets/images/music_logo.png
 
     
 
