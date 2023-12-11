@@ -17,7 +17,26 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
           return SizedBox(
             height: screenHeight * 0.1,
             width: screenWidth,
-            child: const Placeholder(),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //the small music logo
+                SizedBox(
+                  height: double.infinity,
+                  width: screenWidth * 0.2,
+                  child: const Placeholder(),
+                ),
+                SizedBox(
+                  width: screenWidth * 0.08,
+                ),
+                //the song itself and the play button
+                SizedBox(
+                  height: double.infinity,
+                  width: screenWidth * 0.6,
+                  child: Placeholder(),
+                ),
+              ],
+            ),
           );
         },
         separatorBuilder: (context, index) => SizedBox(

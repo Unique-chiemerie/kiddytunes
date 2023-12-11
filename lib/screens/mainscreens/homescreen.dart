@@ -123,6 +123,10 @@ class _HomescreenState extends State<Homescreen> {
                 height: screenHeight * 0.08,
                 width: screenWidth * 0.3,
                 child: TextField(
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(fontSize: screenWidth * 0.05),
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25),
@@ -133,13 +137,15 @@ class _HomescreenState extends State<Homescreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: SvgPicture.asset(
                         'assets/images/stylish_search.svg',
-                        height: 20,
-                        width: 20,
+                        height: screenHeight * 0.05,
+                        width: screenWidth * 0.05,
                       ),
                     ),
                     hintText: 'Search songs',
                     hintStyle: TextStyle(
-                        color: Colors.white, fontSize: screenWidth * 0.05),
+                      color: Colors.white,
+                      fontSize: screenWidth * 0.05,
+                    ),
                   ),
                   cursorColor: Theme.of(context).primaryColor,
                   enableSuggestions: true,
@@ -153,6 +159,7 @@ class _HomescreenState extends State<Homescreen> {
                 children: {
                   //The songs icon
                   1: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Songs',
@@ -166,10 +173,10 @@ class _HomescreenState extends State<Homescreen> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: SizedBox(
+                        child: SvgPicture.asset(
+                          'assets/images/music_icon_svg.svg',
                           height: screenHeight * 0.05,
-                          width: screenWidth * 0.07,
-                          child: Image.asset('assets/images/music_logo.png'),
+                          width: screenWidth * 0.05,
                         ),
                       ),
                     ],
