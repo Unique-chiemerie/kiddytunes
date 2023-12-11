@@ -174,7 +174,7 @@ class _HomescreenState extends State<Homescreen> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: SvgPicture.asset(
-                          'assets/images/music_icon_svg.svg',
+                          'assets/images/final_music_svg.svg',
                           height: screenHeight * 0.05,
                           width: screenWidth * 0.05,
                         ),
