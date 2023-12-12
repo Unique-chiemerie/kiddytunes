@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Customcard extends StatelessWidget {
   const Customcard({super.key});
@@ -59,9 +60,9 @@ class Customcard extends StatelessWidget {
             child: SizedBox(
               height: screenHeight * 0.11,
               width: screenWidth * 0.09,
-              child: const Placeholder(),
+              child: SvgPicture.asset('assets/images/spiral_bind.svg'),
             ),
-          )
+          ),
         ],
       ),
     );
