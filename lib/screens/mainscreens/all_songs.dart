@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kiddytunes/data/song_list.dart';
 
 class Allsongsscreen extends StatefulWidget {
   const Allsongsscreen({super.key});
@@ -15,6 +16,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
     final screenWidth = MediaQuery.of(context).size.width;
     return ListView.separated(
         itemBuilder: (context, index) {
+          final songs = songslist[index];
           return SizedBox(
             height: screenHeight * 0.1,
             width: screenWidth,
@@ -38,12 +40,12 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                   ),
                 ),
                 SizedBox(
-                  width: screenWidth * 0.08,
+                  width: screenWidth * 0.05,
                 ),
                 //the song itself and the play button:
                 Container(
                   height: double.infinity,
-                  width: screenWidth * 0.6,
+                  width: screenWidth * 0.65,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: Theme.of(context).primaryColor,
@@ -51,10 +53,36 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Songs'),
+                      SizedBox(
+                        width: screenWidth * 0.02,
+                      ),
+                      //the text sized box
+                      SizedBox(
+                        width: screenWidth * 0.4,
+                        height: screenHeight * 0.05,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Text(
+                              songs,
+                              style: TextStyle(
+                                  fontSize: screenWidth * 0.05,
+                                  color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Spacer(),
                       IconButton(
                         onPressed: () {},
-                        icon: SvgPicture.asset('assets/images/play_fab.svg'),
+                        icon: SvgPicture.asset(
+                          'assets/images/play_fab.svg',
+                          height: screenHeight * 0.07,
+                          width: screenWidth * 0.07,
+                        ),
+                      ),
+                      SizedBox(
+                        width: screenWidth * 0.005,
                       ),
                     ],
                   ),
@@ -66,6 +94,6 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
         separatorBuilder: (context, index) => SizedBox(
               height: screenHeight * 0.05,
             ),
-        itemCount: 10);
+        itemCount: songslist.length);
   }
 }
