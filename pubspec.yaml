@@ -78,7 +78,9 @@ flutter:
     - assets/images/heart_icon.png
     - assets/images/music_logo.png
     - assets/images/final_music_svg.svg
-    - assets/images/final_music_svg.svg
+    - assets/images/Heart_svg.svg
+    - assets/images/love_song.svg
+    - assets/images/play_fab.svg
 
     
 

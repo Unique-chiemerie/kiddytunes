@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Allsongsscreen extends StatefulWidget {
   const Allsongsscreen({super.key});
@@ -20,20 +21,43 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                //the small music logo
-                SizedBox(
+                //the small music logo before the songs :
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Theme.of(context).primaryColor.withOpacity(0.8),
+                  ),
                   height: double.infinity,
                   width: screenWidth * 0.2,
-                  child: const Placeholder(),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      'assets/images/love_song.svg',
+                      height: screenHeight * 0.05,
+                      width: screenWidth * 0.05,
+                    ),
+                  ),
                 ),
                 SizedBox(
                   width: screenWidth * 0.08,
                 ),
-                //the song itself and the play button
-                SizedBox(
+                //the song itself and the play button:
+                Container(
                   height: double.infinity,
                   width: screenWidth * 0.6,
-                  child: Placeholder(),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Songs'),
+                      IconButton(
+                        onPressed: () {},
+                        icon: SvgPicture.asset('assets/images/play_fab.svg'),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),

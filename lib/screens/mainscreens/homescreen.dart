@@ -169,7 +169,7 @@ class _HomescreenState extends State<Homescreen> {
                         ),
                       ),
                       SizedBox(
-                        width: screenWidth * 0.05,
+                        width: screenWidth * 0.02,
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -183,21 +183,19 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                   //The favourited icon
                   2: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
                         'Favourites',
                         style: TextStyle(
-                          fontSize: screenWidth * 0.05,
+                          fontSize: screenWidth * 0.045,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SizedBox(
-                          height: screenHeight * 0.05,
-                          width: screenWidth * 0.05,
-                          child: Image.asset('assets/images/heart_icon.png'),
-                        ),
+                      SvgPicture.asset(
+                        'assets/images/Heart_svg.svg',
+                        height: screenHeight * 0.05,
+                        width: screenWidth * 0.02,
                       ),
                     ],
                   ),
@@ -206,7 +204,7 @@ class _HomescreenState extends State<Homescreen> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     color: Theme.of(context).primaryColor),
-                fixedWidth: screenWidth * 0.4,
+                fixedWidth: screenWidth * 0.45,
                 thumbDecoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
