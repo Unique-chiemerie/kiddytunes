@@ -31,7 +31,7 @@ class Customcard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight * 0.05,
+                  height: screenHeight * 0.03,
                 ),
                 Center(
                   child: Container(
@@ -49,6 +49,19 @@ class Customcard extends StatelessWidget {
               ],
             ),
           ),
+          //the litle pin that acts like spiral binding on the two Container
+          Padding(
+            //dynamic padding to align the spiral bind logo
+            padding: EdgeInsets.only(
+                left: screenWidth * 0.45,
+                top: screenWidth * 0.25,
+                right: screenWidth * 0.3),
+            child: SizedBox(
+              height: screenHeight * 0.11,
+              width: screenWidth * 0.09,
+              child: const Placeholder(),
+            ),
+          )
         ],
       ),
     );
