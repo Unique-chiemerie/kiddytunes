@@ -17,6 +17,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
     return ListView.separated(
       itemBuilder: (context, index) {
         final songs = songlist[index].songname;
+        final screensindex = songlist[index].screens;
         return SizedBox(
           height: screenHeight * 0.1,
           width: screenWidth,
@@ -73,8 +74,16 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                       ),
                     ),
                     const Spacer(),
+                    //this should indexly
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => screensindex,
+                          ),
+                        );
+                      },
                       icon: SvgPicture.asset(
                         'assets/images/play_fab.svg',
                         height: screenHeight * 0.07,
