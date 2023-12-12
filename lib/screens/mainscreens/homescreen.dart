@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
+import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/all_songs.dart';
 
 class Homescreen extends StatefulWidget {
@@ -29,6 +30,7 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+    final favourites = songslist.length.toInt();
 
     return SafeArea(
       child: Scaffold(
@@ -75,7 +77,7 @@ class _HomescreenState extends State<Homescreen> {
                         ),
                         Center(
                           child: Text(
-                            'Favourites: 10',
+                            'Favourites: $favourites',
                             style: TextStyle(
                                 fontSize: screenWidth * 0.03,
                                 fontWeight: FontWeight.bold),
