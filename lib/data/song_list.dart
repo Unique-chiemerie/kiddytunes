@@ -4,172 +4,180 @@ import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 class SongmetaData {
   String songname;
   String lyrics;
-  Widget screens;
+  final List<Widget> screens;
   SongmetaData(
       {required this.lyrics, required this.songname, required this.screens});
 }
 
 List<SongmetaData> songlist = [
   SongmetaData(
-      lyrics: '', songname: 'Twinkle little star', screens: const Customcard()),
+    lyrics: 'Twinkle ,Twinkle ,little star,\n'
+        'How i wondered what you are,\n'
+        'High above the world so bright,\n'
+        'like a diamond in the sky,\n'
+        'Twinkle, Twinkle ,little star\n'
+        'How i wonder what you are\n',
+    songname: 'Twinkle little star',
+    screens: [const Customcard()],
+  ),
   SongmetaData(
-    lyrics: '',
+    lyrics: 'Baaaaby, shark doo doo doo',
     songname: 'Baby Shark',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Silent night',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Joy to the World',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Baa,Baa black sheep',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Mary had a little lamb',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Old mcDonald had a farm',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Old mcDonald had a farm',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'if you\'re happy and you know it',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Row Row Row your boat',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Head, Shoulders, Knees, and Toes',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Itsy bitsy spider',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Alphabat song',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Rain Rain GO away',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Humpty dumpty',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'The hokey pokey',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'London bridge is falling down',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Skip to my Lou',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Jack and Jill',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'This old man',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'She\'ll be coming\'round the mountain',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Pop goes the weasel',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'The more we get together',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Five little monkeys',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Ten in the bed',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'I\'m a little teapot',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Down by the bay',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'The ants Go marching',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'I\'ve been working on the Railroad',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Six little ducks',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Apples and bananas',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: 'Down by the station',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
   SongmetaData(
     lyrics: '',
     songname: '',
-    screens: const Customcard(),
+    screens: [const Customcard()],
   ),
 ];

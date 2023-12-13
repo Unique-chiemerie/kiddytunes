@@ -74,13 +74,14 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                       ),
                     ),
                     const Spacer(),
-                    //this should indexly
+                    //this should indexly,
+                    //for some reason it's not working indexically
                     IconButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => screensindex,
+                            builder: (context) => screensindex[index],
                           ),
                         );
                       },
