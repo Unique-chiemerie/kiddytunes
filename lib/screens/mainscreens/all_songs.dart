@@ -17,7 +17,6 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
     return ListView.separated(
       itemBuilder: (context, index) {
         final songs = songlist[index].songname;
-        final screensindex = songlist[index].screens;
         return SizedBox(
           height: screenHeight * 0.1,
           width: screenWidth,
@@ -81,7 +80,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => screensindex[index],
+                            builder: (context) => screensList[index],
                           ),
                         );
                       },

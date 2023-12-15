@@ -13,6 +13,9 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
+  final TextEditingController _searchcontroller = TextEditingController();
+
+  List<String> filteredsongs = List.from(songsString);
   int selected = 1;
 //sliding controller logic
   Widget buildscreen() {
@@ -25,6 +28,7 @@ class _HomescreenState extends State<Homescreen> {
     }
     return const Placeholder();
   }
+  //search funcionality
 
   @override
   Widget build(BuildContext context) {
@@ -119,6 +123,7 @@ class _HomescreenState extends State<Homescreen> {
               height: 30,
             ),
             //the search bar for songs
+            //call the implemented search function here:
             Padding(
               padding: const EdgeInsets.all(10),
               child: SizedBox(
