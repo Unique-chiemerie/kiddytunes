@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kiddytunes/data/song_list.dart';
+import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 
 class Allsongsscreen extends StatefulWidget {
   const Allsongsscreen({super.key});
@@ -16,7 +17,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
     final screenWidth = MediaQuery.of(context).size.width;
     return ListView.separated(
       itemBuilder: (context, index) {
-        final songs = songlist[index].songname;
+        final songnames = filteredsongs[index];
         return SizedBox(
           height: screenHeight * 0.1,
           width: screenWidth,
@@ -64,7 +65,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                         scrollDirection: Axis.horizontal,
                         children: [
                           Text(
-                            songs,
+                            songnames,
                             style: TextStyle(
                                 fontSize: screenWidth * 0.05,
                                 color: Colors.white),
@@ -103,7 +104,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
       separatorBuilder: (context, index) => SizedBox(
         height: screenHeight * 0.05,
       ),
-      itemCount: songlist.length,
+      itemCount: filteredsongs.length,
     );
   }
 }

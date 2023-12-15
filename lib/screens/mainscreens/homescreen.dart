@@ -5,6 +5,8 @@ import 'package:custom_sliding_segmented_control/custom_sliding_segmented_contro
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/all_songs.dart';
 
+List<String> filteredsongs = List.from(songsString);
+
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -15,12 +17,20 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   final TextEditingController _searchcontroller = TextEditingController();
 
-  List<String> filteredsongs = List.from(songsString);
   int selected = 1;
 //sliding controller logic
   Widget buildscreen() {
     if (selected == 1) {
-      return const Allsongsscreen();
+      return filteredsongs.isEmpty
+          ? Center(
+              child: Text(
+                'No songs found',
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width,
+                ),
+              ),
+            )
+          : const Allsongsscreen();
     } else if (selected == 2) {
       return const Center(
         child: Text('Favourited'),
@@ -28,7 +38,23 @@ class _HomescreenState extends State<Homescreen> {
     }
     return const Placeholder();
   }
+
   //search funcionality
+  void onsearch(String query) {
+    setState(() {
+      if (query.isEmpty) {
+        filteredsongs = List.from(songsString);
+      } else {
+        filteredsongs = songsString
+            .where(
+              (songString) => songString
+                  .toLowerCase()
+                  .contains(query.toLowerCase().toString()),
+            )
+            .toList();
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -130,6 +156,8 @@ class _HomescreenState extends State<Homescreen> {
                 height: screenHeight * 0.08,
                 width: screenWidth * 0.3,
                 child: TextField(
+                  controller: _searchcontroller,
+                  onChanged: onsearch,
                   style: Theme.of(context)
                       .textTheme
                       .bodyMedium!
