@@ -5,8 +5,6 @@ import 'package:custom_sliding_segmented_control/custom_sliding_segmented_contro
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/all_songs.dart';
 
-List<String> filteredsongs = List.from(songsString);
-
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -16,7 +14,7 @@ class Homescreen extends StatefulWidget {
 
 class _HomescreenState extends State<Homescreen> {
   final TextEditingController _searchcontroller = TextEditingController();
-
+  List<String> filteredsongs = List.from(songsString);
   int selected = 1;
 //sliding controller logic
   Widget buildscreen() {
