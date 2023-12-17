@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kiddytunes/data/song_list.dart';
+import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
+// import 'package:kiddytunes/data/song_list.dart';
+// import 'package:kiddytunes/data/song_list.dart';
+import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
+import 'package:provider/provider.dart';
 
 class Allsongsscreen extends StatefulWidget {
   const Allsongsscreen({super.key});
@@ -14,9 +18,18 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
+    final songListprovider = Provider.of<Songlistprovider>(context);
+
     return ListView.separated(
       itemBuilder: (context, index) {
-        final songs = songlist[index].songname;
+        final filtered = songListprovider.filteredsongs[index];
+        List screensList = songListprovider.filteredsongs.map((filteredSong) {
+          return Customcard(
+            title: filteredSong,
+            lyrics: '',
+          );
+        }).toList();
+
         return SizedBox(
           height: screenHeight * 0.1,
           width: screenWidth,
@@ -64,7 +77,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                         scrollDirection: Axis.horizontal,
                         children: [
                           Text(
-                            songs,
+                            filtered,
                             style: TextStyle(
                                 fontSize: screenWidth * 0.05,
                                 color: Colors.white),
@@ -103,7 +116,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
       separatorBuilder: (context, index) => SizedBox(
         height: screenHeight * 0.05,
       ),
-      itemCount: songlist.length,
+      itemCount: songListprovider.filteredsongs.length,
     );
   }
 }

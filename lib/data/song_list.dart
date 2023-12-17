@@ -1,4 +1,5 @@
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
+import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 
 class SongmetaData {
   String songname;
@@ -1042,6 +1043,7 @@ Woo-woo! Off we go on the railway!\n
     songname: '',
   ),
 ];
+final titleindex = Songlistprovider().filteredsongs;
 //the list of screens
 List screensList = [
   Customcard(
@@ -1203,3 +1205,9 @@ final List<String> songsString = [
   songlist[29].songname,
   songlist[30].songname
 ];
+//creating a map for the songs cuz of the search issue
+Map<String, String> lyricsMap = {
+  'Twinkle little star': 'Lyrics for Twinkle little star...',
+  'Baby Shark': 'Lyrics for Baby Shark...',
+  // Add more entries for other songs
+};

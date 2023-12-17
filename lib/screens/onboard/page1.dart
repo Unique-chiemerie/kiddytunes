@@ -33,7 +33,8 @@ class Page1 extends StatelessWidget {
                 ),
                 Center(
                   child: Text(
-                    'Enjoy over 30 children songs',
+                    'Enjoy over 30\n'
+                    'children songs',
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ),

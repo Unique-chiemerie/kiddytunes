@@ -88,3 +88,40 @@ class _LikebuttonState extends State<Likebutton>
     );
   }
 }
+
+class Notfound extends StatefulWidget {
+  const Notfound({super.key});
+
+  @override
+  State<Notfound> createState() => _NotfoundState();
+}
+
+class _NotfoundState extends State<Notfound>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+    return SizedBox(
+      height: screenHeight * 0.25,
+      width: screenWidth * 0.25,
+      child: Lottie.asset(
+        'assets/animations/not_found.json',
+      ),
+    );
+  }
+}

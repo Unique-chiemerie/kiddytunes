@@ -4,6 +4,23 @@ import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/all_songs.dart';
+import 'package:provider/provider.dart';
+
+//create  a provider for songs
+class Songlistprovider extends ChangeNotifier {
+  List<String> filteredsongs = List.from(songsString);
+  void updateFilteredList(String query) {
+    if (query.isEmpty) {
+      filteredsongs = List.from(songsString);
+    } else {
+      filteredsongs = songsString
+          .where((songString) =>
+              songString.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    notifyListeners();
+  }
+}
 
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
@@ -14,44 +31,26 @@ class Homescreen extends StatefulWidget {
 
 class _HomescreenState extends State<Homescreen> {
   final TextEditingController _searchcontroller = TextEditingController();
-  List<String> filteredsongs = List.from(songsString);
+
   int selected = 1;
+
+  //search funcionality
+  void onsearch(String query) {
+    final songLeestprovider =
+        Provider.of<Songlistprovider>(context, listen: false);
+    songLeestprovider.updateFilteredList(query);
+  }
+
 //sliding controller logic
   Widget buildscreen() {
     if (selected == 1) {
-      return filteredsongs.isEmpty
-          ? Center(
-              child: Text(
-                'No songs found',
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.width,
-                ),
-              ),
-            )
-          : const Allsongsscreen();
+      return const Allsongsscreen();
     } else if (selected == 2) {
       return const Center(
         child: Text('Favourited'),
       );
     }
     return const Placeholder();
-  }
-
-  //search funcionality
-  void onsearch(String query) {
-    setState(() {
-      if (query.isEmpty) {
-        filteredsongs = List.from(songsString);
-      } else {
-        filteredsongs = songsString
-            .where(
-              (songString) => songString
-                  .toLowerCase()
-                  .contains(query.toLowerCase().toString()),
-            )
-            .toList();
-      }
-    });
   }
 
   @override

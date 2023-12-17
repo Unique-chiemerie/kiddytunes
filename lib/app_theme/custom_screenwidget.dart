@@ -70,15 +70,17 @@ class Customcard extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
                             color: Theme.of(context).primaryColor,
                           ),
-                          child: SizedBox(
-                            height: screenHeight * 0.5,
-                            width: screenWidth * 0.8,
-                            child: SingleChildScrollView(
-                              child: Text(
-                                lyrics,
-                                style: TextStyle(
-                                    fontSize: screenWidth * 0.05,
-                                    color: Colors.white),
+                          child: Center(
+                            child: SizedBox(
+                              height: screenHeight * 0.5,
+                              width: screenWidth * 0.8,
+                              child: SingleChildScrollView(
+                                child: Text(
+                                  lyrics,
+                                  style: TextStyle(
+                                      fontSize: screenWidth * 0.05,
+                                      color: Colors.white),
+                                ),
                               ),
                             ),
                           ),
