@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
-// import 'package:kiddytunes/data/song_list.dart';
-// import 'package:kiddytunes/data/song_list.dart';
+import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 import 'package:provider/provider.dart';
 
@@ -26,7 +25,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
         List screensList = songListprovider.filteredsongs.map((filteredSong) {
           return Customcard(
             title: filteredSong,
-            lyrics: '',
+            lyrics: lyricsMap[filteredSong] ?? 'Lyrics not found',
           );
         }).toList();
 
@@ -86,8 +85,6 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                       ),
                     ),
                     const Spacer(),
-                    //this should indexly,
-                    //for some reason it's not working indexically
                     IconButton(
                       onPressed: () {
                         Navigator.push(

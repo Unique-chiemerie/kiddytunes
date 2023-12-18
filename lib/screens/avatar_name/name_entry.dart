@@ -43,6 +43,11 @@ class Namesscreen extends StatelessWidget {
             height: 64,
             width: 274,
             child: TextField(
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    fontSize: MediaQuery.of(context).size.width * 0.05,
+                    color: Colors.black,
+                  ),
+              cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
                 fillColor: Colors.white,
                 filled: true,
