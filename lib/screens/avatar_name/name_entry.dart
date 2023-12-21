@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hive/hive.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
 
 class Namesscreen extends StatelessWidget {
-  const Namesscreen({super.key, required this.selectedindex});
+  Namesscreen({super.key, required this.selectedindex});
   final int selectedindex;
+  final TextEditingController _texty = TextEditingController();
+//function to add to local Hive Db
+  void addname() {
+    final nameBox = Hive.box('names');
+    nameBox.put(1, _texty.text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +50,7 @@ class Namesscreen extends StatelessWidget {
             height: 64,
             width: 274,
             child: TextField(
+              controller: _texty,
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     fontSize: MediaQuery.of(context).size.width * 0.05,
                     color: Colors.black,
@@ -68,6 +76,7 @@ class Namesscreen extends StatelessWidget {
         splashColor: Colors.white,
         onPressed: () {
           Navigator.pushReplacementNamed(context, '/home');
+          addname();
         },
         child: SvgPicture.asset('assets/images/next.svg'),
       ),

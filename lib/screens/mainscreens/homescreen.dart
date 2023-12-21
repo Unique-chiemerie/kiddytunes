@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hive/hive.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 import 'package:kiddytunes/data/song_list.dart';
@@ -58,6 +59,7 @@ class _HomescreenState extends State<Homescreen> {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     final favourites = songlist.length.toInt();
+    final namebox = Hive.box('names');
 
     return SafeArea(
       child: Scaffold(
@@ -117,7 +119,7 @@ class _HomescreenState extends State<Homescreen> {
                     ),
                     //the name of the user
                     Text(
-                      'Martha',
+                     ,
                       style: Theme.of(context)
                           .textTheme
                           .bodyLarge!

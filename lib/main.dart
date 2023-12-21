@@ -3,8 +3,13 @@ import 'package:kiddytunes/app_theme/theme.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 import 'package:kiddytunes/screens/splash/splashscreen.dart';
 import 'package:provider/provider.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main() async {
+  //initialize hive
+  await Hive.initFlutter();
+  //define the box
+  var nameBox = await Hive.openBox('names');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     ChangeNotifierProvider(
