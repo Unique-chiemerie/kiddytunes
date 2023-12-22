@@ -51,10 +51,12 @@ class Namesscreen extends StatelessWidget {
             width: 274,
             child: TextField(
               controller: _texty,
+              maxLength: 8,
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     fontSize: MediaQuery.of(context).size.width * 0.05,
                     color: Colors.black,
                   ),
+              textAlign: TextAlign.justify,
               cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
                 fillColor: Colors.white,
@@ -63,7 +65,7 @@ class Namesscreen extends StatelessWidget {
                 hintStyle: const TextStyle(color: Colors.grey),
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(14),
                 ),
               ),
             ),

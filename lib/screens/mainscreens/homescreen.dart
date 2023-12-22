@@ -117,9 +117,9 @@ class _HomescreenState extends State<Homescreen> {
                     SizedBox(
                       width: screenWidth * 0.05,
                     ),
-                    //the name of the user
+                    //the name of the user saved on the DB
                     Text(
-                     ,
+                      namebox.get(1),
                       style: Theme.of(context)
                           .textTheme
                           .bodyLarge!

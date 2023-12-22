@@ -9,6 +9,7 @@ void main() async {
   //initialize hive
   await Hive.initFlutter();
   //define the box
+  // ignore: unused_local_variable
   var nameBox = await Hive.openBox('names');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
