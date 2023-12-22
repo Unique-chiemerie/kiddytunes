@@ -353,7 +353,8 @@ Safe at last, doo doo doo doo doo doo\n
 Safe at last!
 ''',
 //silent night
-  'silent night': '''Silent night, holy night,\n
+  'silent night': '''
+Silent night, holy night,\n
 All is calm, all is bright\n
 Round yon Virgin, Mother and Child\n
 Holy Infant so tender and mild,\n
@@ -373,8 +374,8 @@ Radiant beams from Thy holy face\n
 With the dawn of redeeming grace,\n
 Jesus, Lord, at Thy birth,\n
 Jesus, Lord, at Thy birth.\n
-    ''',
-  //Joy to the world
+''',
+//Joy to the world
   'Joy to the World': '''
 Joy to the world, the Lord is come!.\n
 Let earth receive her King;\n

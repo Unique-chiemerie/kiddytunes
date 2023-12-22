@@ -5,6 +5,7 @@ import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/all_songs.dart';
+import 'package:kiddytunes/screens/mainscreens/favourited_screen.dart';
 import 'package:provider/provider.dart';
 
 //create  a provider for songs
@@ -39,7 +40,8 @@ class _HomescreenState extends State<Homescreen> {
   void onsearch(String query) {
     final songLeestprovider =
         Provider.of<Songlistprovider>(context, listen: false);
-    songLeestprovider.updateFilteredList(query);
+    songLeestprovider
+        .updateFilteredList(query.isEmpty ? 'No song found' : query);
   }
 
 //sliding controller logic
@@ -47,9 +49,7 @@ class _HomescreenState extends State<Homescreen> {
     if (selected == 1) {
       return const Allsongsscreen();
     } else if (selected == 2) {
-      return const Center(
-        child: Text('Favourited'),
-      );
+      return const Favourited();
     }
     return const Placeholder();
   }

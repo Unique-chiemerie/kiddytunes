@@ -53,7 +53,7 @@ class Customcard extends StatelessWidget {
                                   .textTheme
                                   .bodyLarge!
                                   .copyWith(
-                                    fontSize: screenWidth * 0.05,
+                                    fontSize: screenWidth * 0.045,
                                   ),
                             ),
                           ),
