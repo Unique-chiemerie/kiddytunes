@@ -5,7 +5,12 @@ import 'package:kiddytunes/app_theme/custom_buttons.dart';
 class Customcard extends StatelessWidget {
   final String title;
   final String lyrics;
-  const Customcard({super.key, required this.title, required this.lyrics});
+  final VoidCallback onpressed;
+  const Customcard(
+      {super.key,
+      required this.title,
+      required this.lyrics,
+      required this.onpressed});
 
   @override
   Widget build(BuildContext context) {
@@ -92,14 +97,18 @@ class Customcard extends StatelessWidget {
                       // the love/favouriting button
                       Padding(
                         padding: EdgeInsets.only(right: screenWidth * 0.6),
-                        child: SizedBox(
-                          height: screenHeight * 0.1,
-                          width: screenWidth * 0.2,
-                          child: CircleAvatar(
-                            backgroundColor:
-                                Theme.of(context).primaryColor.withOpacity(0.5),
-                            child: const Center(
-                              child: Likebutton(),
+                        child: GestureDetector(
+                          onTap: onpressed,
+                          child: SizedBox(
+                            height: screenHeight * 0.1,
+                            width: screenWidth * 0.2,
+                            child: CircleAvatar(
+                              backgroundColor: Theme.of(context)
+                                  .primaryColor
+                                  .withOpacity(0.5),
+                              child: const Center(
+                                child: Likebutton(),
+                              ),
                             ),
                           ),
                         ),

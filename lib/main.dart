@@ -11,6 +11,9 @@ void main() async {
   //define the box
   // ignore: unused_local_variable
   var nameBox = await Hive.openBox('names');
+  //the favourites local DB
+  // ignore: unused_local_variable
+  var favebox = await Hive.openBox('favourites');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     ChangeNotifierProvider(

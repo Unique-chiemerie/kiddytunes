@@ -40,8 +40,7 @@ class _HomescreenState extends State<Homescreen> {
   void onsearch(String query) {
     final songLeestprovider =
         Provider.of<Songlistprovider>(context, listen: false);
-    songLeestprovider
-        .updateFilteredList(query.isEmpty ? 'No song found' : query);
+    songLeestprovider.updateFilteredList(query);
   }
 
 //sliding controller logic

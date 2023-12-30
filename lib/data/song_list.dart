@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 
@@ -146,126 +147,219 @@ List screensList = [
   Customcard(
     title: songlist[0].songname,
     lyrics: songlist[0].lyrics,
+    onpressed: () {
+      print('saved');
+    },
   ),
   Customcard(
     title: songlist[1].songname,
     lyrics: songlist[1].lyrics,
+    onpressed: () {
+      print('saved 1');
+    },
   ),
   Customcard(
     title: songlist[2].songname,
     lyrics: songlist[2].lyrics,
+    onpressed: () {
+      print('saved 2');
+    },
   ),
   Customcard(
     title: songlist[3].songname,
     lyrics: songlist[3].lyrics,
+    onpressed: () {
+      print('saved 3');
+    },
   ),
   Customcard(
     title: songlist[4].songname,
     lyrics: songlist[4].lyrics,
+    onpressed: () {
+      print('saved 4');
+    },
   ),
   Customcard(
     title: songlist[5].songname,
     lyrics: songlist[5].lyrics,
+    onpressed: () {
+      print('saved 5');
+    },
   ),
   Customcard(
     title: songlist[6].songname,
     lyrics: songlist[6].lyrics,
+    onpressed: () {
+      print('saved 6');
+    },
   ),
   Customcard(
     title: songlist[7].songname,
     lyrics: songlist[7].lyrics,
+    onpressed: () {
+      print('saved 7');
+    },
   ),
   Customcard(
     title: songlist[8].songname,
     lyrics: songlist[8].lyrics,
+    onpressed: () {
+      print('saved 8');
+    },
   ),
   Customcard(
     title: songlist[9].songname,
     lyrics: songlist[9].lyrics,
+    onpressed: () {
+      print('saved 9');
+    },
   ),
   Customcard(
     title: songlist[10].songname,
     lyrics: songlist[10].lyrics,
+    onpressed: () {
+      print('saved 10');
+    },
   ),
   Customcard(
     title: songlist[11].songname,
     lyrics: songlist[11].lyrics,
+    onpressed: () {
+      print('saved 11');
+    },
   ),
   Customcard(
     title: songlist[12].songname,
     lyrics: songlist[12].lyrics,
+    onpressed: () {
+      print('saved 12');
+    },
   ),
   Customcard(
     title: songlist[13].songname,
     lyrics: songlist[13].lyrics,
+    onpressed: () {
+      print('saved 13');
+    },
   ),
   Customcard(
     title: songlist[14].songname,
     lyrics: songlist[14].lyrics,
+    onpressed: () {
+      print('saved 14');
+    },
   ),
   Customcard(
     title: songlist[15].songname,
     lyrics: songlist[15].lyrics,
+    onpressed: () {
+      print('saved 15');
+    },
   ),
   Customcard(
     title: songlist[16].songname,
     lyrics: songlist[16].lyrics,
+    onpressed: () {
+      print('saved 16');
+    },
   ),
   Customcard(
     title: songlist[17].songname,
     lyrics: songlist[17].lyrics,
+    onpressed: () {
+      print('saved 17');
+    },
   ),
   Customcard(
     title: songlist[18].songname,
     lyrics: songlist[18].lyrics,
+    onpressed: () {
+      print('saved 18');
+    },
   ),
   Customcard(
     title: songlist[19].songname,
     lyrics: songlist[19].lyrics,
+    onpressed: () {
+      print('saved 19');
+    },
   ),
   Customcard(
     title: songlist[20].songname,
     lyrics: songlist[20].lyrics,
+    onpressed: () {
+      print('saved 20');
+    },
   ),
   Customcard(
     title: songlist[21].songname,
     lyrics: songlist[21].lyrics,
+    onpressed: () {
+      print('saved 21');
+    },
   ),
   Customcard(
     title: songlist[22].songname,
     lyrics: songlist[22].lyrics,
+    onpressed: () {
+      print('saved 22');
+    },
   ),
   Customcard(
     title: songlist[23].songname,
     lyrics: songlist[23].lyrics,
+    onpressed: () {
+      print('saved 23');
+    },
   ),
   Customcard(
     title: songlist[24].songname,
     lyrics: songlist[24].lyrics,
+    onpressed: () {
+      print('saved 24');
+    },
   ),
   Customcard(
     title: songlist[25].songname,
     lyrics: songlist[25].lyrics,
+    onpressed: () {
+      print('saved 25');
+    },
   ),
   Customcard(
     title: songlist[26].songname,
     lyrics: songlist[26].lyrics,
+    onpressed: () {
+      print('saved 26');
+    },
   ),
   Customcard(
     title: songlist[27].songname,
     lyrics: songlist[27].lyrics,
+    onpressed: () {
+      print('saved 27');
+    },
   ),
   Customcard(
     title: songlist[28].songname,
     lyrics: songlist[28].lyrics,
+    onpressed: () {
+      print('saved 28');
+    },
   ),
   Customcard(
     title: songlist[29].songname,
     lyrics: songlist[29].lyrics,
+    onpressed: () {
+      print('saved 29');
+    },
   ),
   Customcard(
     title: songlist[30].songname,
     lyrics: songlist[30].lyrics,
+    onpressed: () {
+      print('saved 30');
+    },
   ),
 ];
 
@@ -1265,5 +1359,6 @@ Down by the station early in the morning,\n
 See the shiny track, curving away.\n
 Here is the station, here is the tranin,\n
 Woo-woo! Off we go on the railway!\n
-'''
+''',
+  '': ""
 };
