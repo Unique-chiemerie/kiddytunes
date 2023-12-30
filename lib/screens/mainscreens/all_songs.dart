@@ -25,6 +25,9 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
         List screensList = songListprovider.filteredsongs.map((filteredSong) {
           return Customcard(
             title: filteredSong,
+            onpressed: () {
+              print('Saved or not');
+            },
             lyrics: lyricsMap[filteredSong] ?? 'Lyrics not found',
           );
         }).toList();
