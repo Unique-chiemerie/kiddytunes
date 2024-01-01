@@ -27,9 +27,6 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
           var favebox = Hive.box('favourites');
           return Customcard(
             title: filteredSong,
-            onpressed: () {
-              favebox.put(index, filteredSong);
-            },
             lyrics: lyricsMap[filteredSong] ?? 'Lyrics not found',
           );
         }).toList();
