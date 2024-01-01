@@ -164,7 +164,7 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             //the search bar for songs
             //call the implemented search function here:

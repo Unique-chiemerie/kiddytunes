@@ -6,12 +6,15 @@ class Favourited extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Favouriteanimation(),
+        const Favouriteanimation(),
         Center(
-          child: Text('No favourites yet'),
+          child: Text(
+            'No favourites yet',
+            style: Theme.of(context).textTheme.bodyLarge,
+          ),
         ),
       ],
     );
