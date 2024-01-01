@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiddytunes/app_theme/custom_buttons.dart';
+// import 'package:kiddytunes/app_theme/custom_buttons.dart';
 
 class Favourited extends StatelessWidget {
   const Favourited({super.key});
@@ -10,12 +10,12 @@ class Favourited extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Favouriteanimation(),
+        // const Favouriteanimation(),
         Center(
           child: Text(
             'No favourites yet',
             style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                  fontSize: screenWidth * 0.01,
+                  fontSize: screenWidth * 0.05,
                 ),
           ),
         ),

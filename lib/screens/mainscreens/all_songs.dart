@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kiddytunes/app_theme/custom_buttons.dart';
+// import 'package:kiddytunes/app_theme/custom_buttons.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
@@ -36,16 +36,20 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              //the small music logo before the songs :
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Theme.of(context).primaryColor.withOpacity(0.8),
-                ),
-                height: double.infinity,
-                width: screenWidth * 0.2,
-                child: const Center(
-                  child: Likebutton(),
+              //favourites button
+              //the function to add and remove songs from the favourites DB
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Theme.of(context).primaryColor.withOpacity(0.8),
+                  ),
+                  height: double.infinity,
+                  width: screenWidth * 0.2,
+                  // child: const Center(
+                  //   child: Likebutton(),
+                  // ),
                 ),
               ),
               SizedBox(

@@ -117,8 +117,8 @@ class _NotfoundState extends State<Notfound>
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     return SizedBox(
-      height: screenHeight * 0.25,
-      width: screenWidth * 0.25,
+      height: screenHeight * 0.4,
+      width: screenWidth * 0.4,
       child: Lottie.asset(
         'assets/animations/orange_search.json',
       ),
