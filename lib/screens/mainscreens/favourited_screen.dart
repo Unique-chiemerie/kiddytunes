@@ -9,9 +9,11 @@ class Favourited extends StatelessWidget {
     var favebox = Hive.box('favourites');
 
     return favebox.isEmpty
-        ? const Text('No favourited yet')
-        : Text(
-            favebox.get(1),
+        ? const Center(child: Text('No favourited yet'))
+        : Center(
+            child: Text(
+              favebox.get(1),
+            ),
           );
   }
 }

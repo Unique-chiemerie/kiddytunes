@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+// import 'package:flutter/material.dart';
+// import 'package:hive_flutter/hive_flutter.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 
@@ -145,229 +145,163 @@ List<SongmetaData> songlist = [
 final titleindex = Songlistprovider().filteredsongs;
 
 //function to add the songs into a faveDB
-void favsong() {
-  final favbox = Hive.box('favourites');
-  favbox.put(1, 'first song');
-}
 
 //the list of screens
 List screensList = [
   Customcard(
     title: songlist[0].songname,
     lyrics: songlist[0].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[1].songname,
     lyrics: songlist[1].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[2].songname,
     lyrics: songlist[2].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[3].songname,
     lyrics: songlist[3].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[4].songname,
     lyrics: songlist[4].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[5].songname,
     lyrics: songlist[5].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[6].songname,
     lyrics: songlist[6].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[7].songname,
     lyrics: songlist[7].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[8].songname,
     lyrics: songlist[8].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[9].songname,
     lyrics: songlist[9].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[10].songname,
     lyrics: songlist[10].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[11].songname,
     lyrics: songlist[11].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[12].songname,
     lyrics: songlist[12].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[13].songname,
     lyrics: songlist[13].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[14].songname,
     lyrics: songlist[14].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[15].songname,
     lyrics: songlist[15].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[16].songname,
     lyrics: songlist[16].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[17].songname,
     lyrics: songlist[17].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[18].songname,
     lyrics: songlist[18].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[19].songname,
     lyrics: songlist[19].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[20].songname,
     lyrics: songlist[20].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[21].songname,
     lyrics: songlist[21].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[22].songname,
     lyrics: songlist[22].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[23].songname,
     lyrics: songlist[23].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[24].songname,
     lyrics: songlist[24].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[25].songname,
     lyrics: songlist[25].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[26].songname,
     lyrics: songlist[26].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[27].songname,
     lyrics: songlist[27].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[28].songname,
     lyrics: songlist[28].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[29].songname,
     lyrics: songlist[29].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
   Customcard(
     title: songlist[30].songname,
     lyrics: songlist[30].lyrics,
-    onpressed: () {
-      favsong();
-    },
+    onpressed: () {},
   ),
 ];
 
