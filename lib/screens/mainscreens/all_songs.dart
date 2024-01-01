@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:kiddytunes/app_theme/custom_buttons.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
@@ -24,7 +24,6 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
       itemBuilder: (context, index) {
         final filtered = songListprovider.filteredsongs[index];
         List screensList = songListprovider.filteredsongs.map((filteredSong) {
-          var favebox = Hive.box('favourites');
           return Customcard(
             title: filteredSong,
             lyrics: lyricsMap[filteredSong] ?? 'Lyrics not found',
@@ -45,12 +44,8 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                 ),
                 height: double.infinity,
                 width: screenWidth * 0.2,
-                child: Center(
-                  child: SvgPicture.asset(
-                    'assets/images/love_song.svg',
-                    height: screenHeight * 0.05,
-                    width: screenWidth * 0.05,
-                  ),
+                child: const Center(
+                  child: Likebutton(),
                 ),
               ),
               SizedBox(
