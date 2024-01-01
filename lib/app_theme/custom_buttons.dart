@@ -120,8 +120,30 @@ class _NotfoundState extends State<Notfound>
       height: screenHeight * 0.25,
       width: screenWidth * 0.25,
       child: Lottie.asset(
-        'assets/animations/not_found.json',
+        'assets/animations/notFound.json',
       ),
+    );
+  }
+}
+
+//the favourited animation
+class Favouriteanimation extends StatefulWidget {
+  const Favouriteanimation({super.key});
+
+  @override
+  State<Favouriteanimation> createState() => _FavouriteanimationState();
+}
+
+class _FavouriteanimationState extends State<Favouriteanimation>
+    with SingleTickerProviderStateMixin {
+  @override
+  Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+    return SizedBox(
+      height: screenHeight * 0.25,
+      width: screenWidth * 0.25,
+      child: Lottie.asset('assets/animations/no_favourited.json'),
     );
   }
 }
