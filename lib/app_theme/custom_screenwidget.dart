@@ -93,21 +93,6 @@ class Customcard extends StatelessWidget {
                       SizedBox(
                         height: screenHeight * 0.02,
                       ),
-                      // the love/favouriting button
-                      Padding(
-                        padding: EdgeInsets.only(right: screenWidth * 0.6),
-                        child: SizedBox(
-                          height: screenHeight * 0.1,
-                          width: screenWidth * 0.2,
-                          child: CircleAvatar(
-                            backgroundColor:
-                                Theme.of(context).primaryColor.withOpacity(0.5),
-                            child: const Center(
-                              child: Likebutton(),
-                            ),
-                          ),
-                        ),
-                      ),
                     ],
                   ),
                 ),

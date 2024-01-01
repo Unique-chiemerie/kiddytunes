@@ -358,7 +358,7 @@ Safe at last, doo doo doo doo doo doo\n
 Safe at last!
 ''',
 //silent night
-  'silent night': '''
+  'Silent night': '''
 Silent night, holy night,\n
 All is calm, all is bright\n
 Round yon Virgin, Mother and Child\n

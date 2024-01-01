@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive/hive.dart';
+import 'package:kiddytunes/app_theme/custom_buttons.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 import 'package:kiddytunes/data/song_list.dart';
@@ -45,12 +46,31 @@ class _HomescreenState extends State<Homescreen> {
 
 //sliding controller logic
   Widget buildscreen() {
-    if (selected == 1) {
-      return const Allsongsscreen();
-    } else if (selected == 2) {
-      return const Favourited();
+    final songListProvider =
+        Provider.of<Songlistprovider>(context, listen: false);
+    final filteredSongs = songListProvider.filteredsongs;
+
+    if (filteredSongs.isEmpty) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Notfound(),
+          Text(
+            'No songs found',
+            style: TextStyle(
+                fontSize: MediaQuery.of(context).size.width * 0.05,
+                color: Colors.red),
+          ),
+        ],
+      );
+    } else {
+      if (selected == 1) {
+        return const Allsongsscreen();
+      } else if (selected == 2) {
+        return const Favourited();
+      }
+      return const Placeholder();
     }
-    return const Placeholder();
   }
 
   @override
@@ -65,7 +85,7 @@ class _HomescreenState extends State<Homescreen> {
         body: ListView(
           children: [
             const SizedBox(
-              height: 50,
+              height: 20,
             ),
             //Dashboard displaying names
             //hive should be used here to display the name the user selected
@@ -251,7 +271,7 @@ class _HomescreenState extends State<Homescreen> {
             ),
 
             const SizedBox(
-              height: 50,
+              height: 30,
             ),
             //the sized box for the songs
             Padding(

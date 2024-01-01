@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kiddytunes/app_theme/custom_buttons.dart';
 
 class Favourited extends StatelessWidget {
   const Favourited({super.key});
@@ -7,7 +6,7 @@ class Favourited extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Notfound(),
+      child: Text('No favourites yet'),
     );
   }
 }
