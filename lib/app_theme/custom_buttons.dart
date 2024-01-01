@@ -120,7 +120,7 @@ class _NotfoundState extends State<Notfound>
       height: screenHeight * 0.25,
       width: screenWidth * 0.25,
       child: Lottie.asset(
-        'assets/animations/notFound.json',
+        'assets/animations/orange_search.json',
       ),
     );
   }
@@ -143,7 +143,7 @@ class _FavouriteanimationState extends State<Favouriteanimation>
     return SizedBox(
       height: screenHeight * 0.25,
       width: screenWidth * 0.25,
-      child: Lottie.asset('assets/animations/no_favourited.json'),
+      child: Lottie.asset('assets/animations/Ghost_notfound.json'),
     );
   }
 }

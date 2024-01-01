@@ -6,6 +6,7 @@ class Favourited extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -13,7 +14,9 @@ class Favourited extends StatelessWidget {
         Center(
           child: Text(
             'No favourites yet',
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  fontSize: screenWidth * 0.01,
+                ),
           ),
         ),
       ],

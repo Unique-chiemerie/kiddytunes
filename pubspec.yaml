@@ -88,8 +88,9 @@ flutter:
     - assets/images/spiral_bind.svg
     - assets/images/white_fab.svg
     - assets/animations/heart_animation.json
-    - assets/animations/notFound.json
+    - assets/animations/Ghost_notfound.json
     - assets/animations/no_favourited.json
+    - assets/animations/orange_search.json
 
     
 
