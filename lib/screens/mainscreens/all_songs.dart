@@ -19,6 +19,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     final songListprovider = Provider.of<Songlistprovider>(context);
+    bool isfav = false;
 
     return ListView.separated(
       itemBuilder: (context, index) {
@@ -39,7 +40,16 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
               //favourites button
               //the function to add and remove songs from the favourites DB
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  setState(() {
+                    isfav != isfav;
+                  });
+                  if (isfav == true) {
+                    print('favourited');
+                  } else {
+                    print('Not favourited');
+                  }
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
