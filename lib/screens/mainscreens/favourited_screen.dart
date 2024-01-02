@@ -42,38 +42,17 @@ class _FavouritedState extends State<Favourited> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    //favourites button
-                    //the function to add and remove songs from the favourites DB
-                    GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          if (favebox.containsKey(index)) {
-                            favebox.delete(index); // remove from favorites
-                          } else {
-                            favebox.put(index, true); // add to favorites
-                          }
-                        });
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color:
-                              Theme.of(context).primaryColor.withOpacity(0.8),
-                        ),
-                        height: double.infinity,
-                        width: screenWidth * 0.2,
-                        // child: const Center(
-                        //   child: Likebutton(),
-                        // ),
-                        child: favebox.containsKey(index)
-                            ? const Icon(
-                                Icons.thumb_up_rounded,
-                                color: Colors.red,
-                              )
-                            : const Icon(
-                                Icons.thumb_up_rounded,
-                                color: Colors.grey,
-                              ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Theme.of(context).primaryColor.withOpacity(0.8),
+                      ),
+                      height: double.infinity,
+                      width: screenWidth * 0.25,
+                      child: SvgPicture.asset(
+                        'assets/images/love_song.svg',
+                        height: screenHeight * 0.005,
+                        width: screenWidth * 0.005,
                       ),
                     ),
                     SizedBox(
@@ -136,8 +115,9 @@ class _FavouritedState extends State<Favourited> {
               );
             },
             separatorBuilder: (context, index) => SizedBox(
-                  height: screenHeight * 0.05,
-                ),
-            itemCount: favouritedIndices.length);
+              height: screenHeight * 0.05,
+            ),
+            itemCount: favouritedIndices.length,
+          );
   }
 }
