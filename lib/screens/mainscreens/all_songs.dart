@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hive/hive.dart';
 // import 'package:kiddytunes/app_theme/custom_buttons.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 import 'package:kiddytunes/data/song_list.dart';
@@ -19,10 +20,10 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     final songListprovider = Provider.of<Songlistprovider>(context);
-    bool isfav = false;
 
     return ListView.separated(
       itemBuilder: (context, index) {
+        final favebox = Hive.box('favourites');
         final filtered = songListprovider.filteredsongs[index];
         List screensList = songListprovider.filteredsongs.map((filteredSong) {
           return Customcard(
@@ -42,13 +43,12 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    isfav != isfav;
+                    if (favebox.containsKey(index)) {
+                      favebox.delete(index); // remove from favorites
+                    } else {
+                      favebox.put(index, true); // add to favorites
+                    }
                   });
-                  if (isfav == true) {
-                    print('favourited');
-                  } else {
-                    print('Not favourited');
-                  }
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -60,6 +60,15 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                   // child: const Center(
                   //   child: Likebutton(),
                   // ),
+                  child: favebox.containsKey(index)
+                      ? const Icon(
+                          Icons.thumb_up_rounded,
+                          color: Colors.grey,
+                        )
+                      : const Icon(
+                          Icons.thumb_up_rounded,
+                          color: Colors.red,
+                        ),
                 ),
               ),
               SizedBox(
