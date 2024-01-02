@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive/hive.dart';
 import 'package:kiddytunes/data/song_list.dart';
-// import 'package:kiddytunes/app_theme/custom_buttons.dart';
 
+// import 'package:kiddytunes/app_theme/custom_buttons.dart';
 class Favourited extends StatefulWidget {
   const Favourited({super.key});
 
@@ -17,8 +17,10 @@ class _FavouritedState extends State<Favourited> {
     final favebox = Hive.box('favourites');
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
+
     List<int> favouritedIndices =
         favebox.keys.map((key) => int.parse(key)).toList();
+
     return favebox.isEmpty
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.center,
