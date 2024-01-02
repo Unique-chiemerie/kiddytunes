@@ -17,7 +17,8 @@ class _FavouritedState extends State<Favourited> {
     final favebox = Hive.box('favourites');
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    List<int> favouritedIndices = favebox.keys.cast<int>().toList();
+    List<int> favouritedIndices =
+        favebox.keys.map((key) => int.parse(key)).toList();
     return favebox.isEmpty
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.center,
