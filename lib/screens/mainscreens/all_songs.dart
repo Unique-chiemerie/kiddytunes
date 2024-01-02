@@ -63,11 +63,11 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                   child: favebox.containsKey(index)
                       ? const Icon(
                           Icons.thumb_up_rounded,
-                          color: Colors.grey,
+                          color: Colors.red,
                         )
                       : const Icon(
                           Icons.thumb_up_rounded,
-                          color: Colors.red,
+                          color: Colors.grey,
                         ),
                 ),
               ),
