@@ -43,18 +43,18 @@ class _FavouritedState extends State<Favourited> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Theme.of(context).primaryColor.withOpacity(0.8),
-                      ),
-                      height: double.infinity,
-                      width: screenWidth * 0.25,
-                      child: SvgPicture.asset(
-                        'assets/images/love_song.svg',
-                        height: screenHeight * 0.005,
-                        width: screenWidth * 0.005,
-                      ),
-                    ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          color:
+                              Theme.of(context).primaryColor.withOpacity(0.8),
+                        ),
+                        height: double.infinity,
+                        width: screenWidth * 0.2,
+                        child: SizedBox(
+                          height: screenHeight * 0.05,
+                          width: screenWidth * 0.05,
+                          child: Image.asset('assets/images/love.png'),
+                        )),
                     SizedBox(
                       width: screenWidth * 0.05,
                     ),

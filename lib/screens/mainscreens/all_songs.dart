@@ -43,10 +43,10 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    if (favebox.containsKey(index)) {
-                      favebox.delete(index); // remove from favorites
+                    if (favebox.containsKey(filtered)) {
+                      favebox.delete(filtered); // remove from favorites
                     } else {
-                      favebox.put(index, true); // add to favorites
+                      favebox.put(filtered, true); // add to favorites
                     }
                   });
                 },
