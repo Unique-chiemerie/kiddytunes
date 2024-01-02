@@ -60,7 +60,7 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                   // child: const Center(
                   //   child: Likebutton(),
                   // ),
-                  child: favebox.containsKey(index)
+                  child: favebox.containsKey(filtered)
                       ? const Icon(
                           Icons.thumb_up_rounded,
                           color: Colors.red,
