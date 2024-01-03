@@ -71,7 +71,7 @@ List<SongmetaData> songlist = [
   ),
   SongmetaData(
     lyrics: '',
-    songname: 'The hokey pokey',
+    songname: 'The wheels on the bus',
   ),
   SongmetaData(
     lyrics: '',
@@ -79,7 +79,7 @@ List<SongmetaData> songlist = [
   ),
   SongmetaData(
     lyrics: '',
-    songname: 'Skip to my Lou',
+    songname: 'For he\'s a jolly good fellow',
   ),
   SongmetaData(
     lyrics: '',
@@ -115,27 +115,27 @@ List<SongmetaData> songlist = [
   ),
   SongmetaData(
     lyrics: '',
-    songname: 'Down by the bay',
+    songname: 'Baby bumblebee',
   ),
   SongmetaData(
     lyrics: '',
-    songname: 'The ants Go marching',
+    songname: 'Jingle bells',
   ),
   SongmetaData(
     lyrics: '',
-    songname: 'I\'ve been working on the Railroad',
+    songname: 'Deck the halls',
   ),
   SongmetaData(
     lyrics: ' ',
-    songname: 'Six little ducks',
+    songname: 'Rock-a-bye-baby',
   ),
   SongmetaData(
     lyrics: '',
-    songname: 'Apples and bananas',
+    songname: 'Bingo song',
   ),
   SongmetaData(
     lyrics: '',
-    songname: 'Down by the station',
+    songname: 'Hush little baby',
   ),
   SongmetaData(
     lyrics: '',
@@ -474,36 +474,7 @@ Old MacDonald had a farm, E-I-E-I-O,\n
 And on his farm, he had a pig, E-I-E-I-O,\n
 With an oink-oink here and an oink-oink there,\n
 Here an oink, there an oink, everywhere an oink-oink,\n
-Old MacDonald had a farm, E-I-E-I-O.\n
-\n
-Old MacDonald had a farm, E-I-E-I-O,\n
-And on his farm, he had a duck, E-I-E-I-O,\n
-With a quack-quack here and a quack-quack there,\n
-Here a quack, there a quack, everywhere a quack-quack,\n
-Old MacDonald had a farm, E-I-E-I-O.\n
-\n
-Old MacDonald had a farm, E-I-E-I-O,\n
-And on his farm, he had a horse, E-I-E-I-O,\n
-With a neigh-neigh here and a neigh-neigh there,\n
-Here a neigh, there a neigh, everywhere a neigh-neigh,\n
-Old MacDonald had a farm, E-I-E-I-O.\n
-\n
-Old MacDonald had a farm, E-I-E-I-O,\n
-And on his farm, he had some chicks, E-I-E-I-O,\n
-With a cheep-cheep here and a cheep-cheep there,\n
-Here a cheep, there a cheep, everywhere a cheep-cheep,\n
-Old MacDonald had a farm, E-I-E-I-O.\n
-\n
-Old MacDonald had a farm, E-I-E-I-O,\n
-And on his farm, he had a dog, E-I-E-I-O,\n
-With a woof-woof here and a woof-woof there,\n
-Here a woof, there a woof, everywhere a woof-woof,\n
-Old MacDonald had a farm, E-I-E-I-O.\n
-\n
-Old MacDonald had a farm, E-I-E-I-O,\n
-And on his farm, he had a cat, E-I-E-I-O,\n
-With a meow-meow here and a meow-meow there,\n
-Here a meow, there a meow, every
+Old MacDonald had a farm, E-I-E-I-O.
 ''',
 //if you're happy and you know it
   'if you\'re happy and you know it': '''
@@ -512,7 +483,7 @@ If you're happy and you know it, clap your hands (clap clap)\n
 If you're happy and you know it, then your face will surely show it,\n
 If you're happy and you know it, clap your hands (clap clap)\n
 \n
-If you're happy and you know nit, stomp your feet (stomp stomp)\n
+If you're happy and you know it, stomp your feet (stomp stomp)\n
 If you're happy and you know it, stomp your feet (stomp stomp)\n
 If you're happy and you know it, then your face will surely show it,\n
 If you're happy and you know it, stomp your feet (stomp stomp)\n
@@ -527,7 +498,7 @@ Clap your hands (clap clap), stomp your feet (stomp stomp),\n
 Shout "Hooray!" (Hooray!)\n
 \n
 If you're happy and you know it, then your face will surely show it,\n
-If you're happy and you know it, do all three.\n
+If you're happy and you know it, do all three.\n0-=0=
 ''',
 //row your boat
   'Row Row Row your boat': '''
@@ -604,7 +575,7 @@ Goodnight!
 A, B, C, D, E, F, G,\n
 H, I, J, K, L, M, N, O, P,\n
 Q, R, S, T, U, V,\n
-W, X, Y, and Z.\n
+, Y, and Z.\n
 \n
 Now I know my ABCs,\n
 Next time, won't you sing with me?
@@ -638,47 +609,47 @@ Humpty Dumpty had a great fall.\n
 All the king's horses and all the king's men\n
 Couldn't put Humpty together again.
 ''',
-//hokey pokey
-  'The hokey pokey': '''
-You put your right hand in,\n
-You take your right hand out,\n
-You put your right hand in,\n
-And you shake it all about.\n
-You do the Hokey Pokey,\n
-And you turn yourself around,\n
-That's what it's all about!\n
-\n
-You put your left hand in,\n
-You take your left hand out,\n
-You put your left hand in,\n
-And you shake it all about.\n
-You do the Hokey Pokey,\n
-And you turn yourself around,\n
-That's what it's all about!\n
-\n
-You put your right foot in,\n
-You take your right foot out,\n
-You put your right foot in,\n
-And you shake it all about.\n
-You do the Hokey Pokey,\n
-And you turn yourself around,\n
-That's what it's all about!\n
+//wheels on the bus
+  'The wheels on the bus': '''
+The wheels on the bus go round and round,\n
+Round and round, round and round.\n
+The wheels on the bus go round and round,\n
+All through the town.\n
 
-You put your left foot in,\n
-You take your left foot out,\n
-You put your left foot in,\n
-And you shake it all about.\n
-You do the Hokey Pokey,\n
-And you turn yourself around,\n
-That's what it's all about!\n
+The wipers on the bus go swish, swish, swish,\n
+Swish, swish, swish, swish, swish, swish.\n
+The wipers on the bus go swish, swish, swish,\n
+All through the town.\n
 \n
-You put your whole self in,\n
-You take your whole self out,\n
-You put your whole self in,\n
-And you shake it all about.\n
-You do the Hokey Pokey,\n
-And you turn yourself around,\n
-That's what it's all about!\n
+The horn on the bus goes beep, beep, beep,\n
+Beep, beep, beep, beep, beep, beep.\n
+The horn on the bus goes beep, beep, beep,\n
+All through the town.\n
+\n
+The doors on the bus go open and shut,\n
+Open and shut, open and shut.\n
+The doors on the bus go open and shut,\n
+All through the town.\n
+\n
+The driver on the bus says, "Move on back,\n
+Move on back, move on back."\n
+The driver on the bus says, "Move on back,"\n
+All through the town.\n
+\n
+The babies on the bus go, "Wah, wah, wah,\n
+Wah, wah, wah, wah, wah, wah."\n
+The babies on the bus go, "Wah, wah, wah,"\n
+All through the town.\n
+
+The people on the bus go up and down,\n
+Up and down, up and down.\n
+The people on the bus go up and down,\n
+All through the town.\n
+\n
+The motor on the bus goes zoom, zoom, zoom,\n
+Zoom, zoom, zoom, zoom, zoom, zoom.\n
+The motor on the bus goes zoom, zoom, zoom,\n
+All through the town.
 ''',
 //london bridge
   'London bridge is falling down': '''
@@ -718,31 +689,12 @@ London Bridge is standing strong,\n
 My fair lady.\n
 ''',
 //skip to my lou
-  'Skip to my Lou': '''
-Skip, skip, skip to my Lou,\n
-Skip, skip, skip to my Lou,\n
-Skip, skip, skip to my Lou,\n
-Skip to my Lou, my darlin'.\n
-\n
-Lou, Lou, skip to my Lou,\n
-Lou, Lou, skip to my Lou,\n
-Lou, Lou, skip to my Lou,\n
-Skip to my Lou, my darlin'.\n
-\n
-Lost my partner, what'll I do?\n
-Lost my partner, what'll I do?\n
-Lost my partner, what'll I do?\n
-Skip to my Lou, my darlin'.\n
-\n
-I'll find another one prettier than you,\n
-I'll find another one prettier than you,\n
-I'll find another one prettier than you,\n
-Skip to my Lou, my darlin'.\n
-\n
-Skip, skip, skip to my Lou,\n
-Skip, skip, skip to my Lou,\n
-Skip, skip, skip to my Lou,\n
-Skip to my Lou, my darlin'.\n
+  'For he\'s a jolly good fellow': '''
+For he's a jolly good fellow, for he's a jolly good fellow\n
+For he's a jolly good fellow, and so say all of us\n
+And so say all of us, and so say all of us\n
+For he's a jolly good fellow, for he's a jolly good fellow\n
+For he's a jolly good fellow, and so say all of us!\n
 ''',
   'Jack and Jill': '''
 Jack and Jill went up the hill\n
@@ -750,45 +702,15 @@ To fetch a pail of water.\n
 Jack fell down and broke his crown,\n
 And Jill came tumbling after.\n
 \n
-Up Jack got and home did trot\n
+Up Jack got and home did trot,\n
 As fast as he could caper;\n
-To Old Dame Dob who patched his nob\n
+And went to bed and bound his head\n
 With vinegar and brown paper.\n
 \n
-Then up Jack got and home did trot\n
-As fast as he could caper;\n
-To Old Dame Dob who patched his nob\n
-With vinegar and brown paper.\n
-\n
-Then up Jack got and home did trot\n
-As fast as he could caper;\n
-To Old Dame Dob who patched his nob\n
-With vinegar and brown paper.\n
-\n
-Then up Jack got and home did trot\n
-As fast as he could caper;\n
-To Old Dame Dob who patched his nob\n
-With vinegar and brown paper.\n
-\n
-Jill came in and she did grin\n
-To see his paper plaster;\n
+When Jill came in how she did grin\n
+To see Jack's paper plaster;\n
 Mother vexed did whip her next\n
-For causing Jack's disaster.\n
-\n
-Then up Jack got and home did trot\n
-As fast as he could caper;\n
-To Old Dame Dob who patched his nob\n
-With vinegar and brown paper.\n
-\n
-Then up Jack got and home did trot\n
-As fast as he could caper;\n
-To Old Dame Dob who patched his nob\n
-With vinegar and brown paper.\n
-\n
-Then up Jack got and home did trot\n
-As fast as he could caper;\n
-To Old Dame Dob who patched his nob\n
-With vinegar and brown paper.\n
+For causing Jack's disaster.
 ''',
 //this old man
   'This old man': '''
@@ -1006,270 +928,209 @@ Here is my handle, here is my spout.\n
 When I get all steamed up, hear me shout,\n
 Tip me over and pour me out!
 ''',
-//down by the bay
-  'Down by the bay': '''
-Down by the bay,\n
-Where the watermelons grow,\n
-Back to my home,\n
-I dare not go.\n
+//Baby bumblebee
+  'Baby bumblebee': '''
+I'm bringing home my baby bumble bee\n
+Won't my Mommy be so proud of me\n
+I'm bringing home my baby bumble bee\n
+Ouch! It stung me!\n
 \n
-For if I do,\n
-My mother will say,\n
-"Did you ever see a goose\n
-Kissing a moose?\n
+I'm squishin' up my baby bumble bee\n
+Won't my Mommy be so proud of me\n
+I'm squishin' up my baby bumble bee\n
+Ooh! It's yucky!\n
 \n
-Down by the bay."
+I'm lickin' up my baby bumble bee\n
+Won't my Mommy be so proud of me\n
+I'm lickin' up my baby bumble bee\n
+Ick! I feel sick!\n
 \n
-Down by the bay,\n
-Where the watermelons grow,\n
-Back to my home,\n
-I dare not go.\n
+I'm throwin' up my baby bumble bee\n
+Won't my Mommy be so proud of me\n
+I'm throwin' up my baby bumble bee\n
+Ooh! What a mess!\n
 \n
-For if I do,\n
-My mother will say,\n
-"Did you ever see a cat\n
-Wearing a hat?\n
-\n
-Down by the bay."
-\n
-Down by the bay,\n
-Where the watermelons grow,\n
-Back to my home,\n
-I dare not go.\n
-\n
-For if I do,\n
-My mother will say,\n
-"Did you ever see a whale\n
-With a polka-dot tail?\n
-\n
-Down by the bay."
-\n
-Down by the bay,\n
-Where the watermelons grow,\n
-Back to my home,\n
-I dare not go.\n
-\n
-For if I do,\n
-My mother will say,\n
-"Did you ever see a fly\n
-Wearing a tie?\n
-\n
-Down by the bay."
-\n
-Down by the bay,\n
-Where the watermelons grow,\n
-Back to my home,\n
-I dare not go.\n
-\n
-For if I do,\n
-My mother will say,\n
-"Did you ever see a bear\n
-Combing his hair?\n
-\n
-Down by the bay."
-\n
-Down by the bay,\n
-Where the watermelons grow,\n
-Back to my home,\n
-I dare not go.\n
-\n
-For if I do,\n
-My mother will say,\n
-"Did you ever see a llama\n
-Wearing pajamas?\n
-\n
-Down by the bay."
-\n
-Down by the bay,\n
-Where the watermelons grow,\n
-Back to my home,\n
-I dare not go.\n
-\n
-For if I do,\n
-My mother will say,\n
-"Have you ever seen a goat\n
-Rowing a boat?\n
-\n
-Down by the bay."
+5. I'm wipin' up my baby bumble bee\n
+Won't my Mommy be so proud of me\n
+I'm wipin' up my baby bumble bee\n
+Oops!! Mommy's new towel!
 ''',
-//The ants goes marching
-  'The ants Go marching': '''
-The ants go marching one by one, hurrah, hurrah!\n
-The ants go marching one by one, hurrah, hurrah!\n
-The ants go marching one by one,\n
-The little one stops to suck his thumb,\n
-And they all go marching down to the ground\n
-To get out of the rain, boom, boom, boom, boom!\n
+//Jingle bells
+  'Jingle bells': '''
+Dashing through the snow\n
+In a one horse open sleigh
+O'er the fields we go\n
+Laughing all the way\n
+Bells on bob tails ring\n
+Making spirits bright\n
+What fun it is to laugh and sing\n
+A sleighing song tonight\n
 \n
-The ants go marching two by two, hurrah, hurrah!\n
-The ants go marching two by two, hurrah, hurrah!\n
-The ants go marching two by two,\n
-The little one stops to tie his shoe,\n
-And they all go marching down to the ground\n
-To get out of the rain, boom, boom, boom, boom!\n
+Oh, jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh\n
+Jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh\n
 \n
-The ants go marching three by three, hurrah, hurrah!\n
-The ants go marching three by three, hurrah, hurrah!\n
-The ants go marching three by three,\n
-The little one stops to climb a tree,\n
-And they all go marching down to the ground\n
-To get out of the rain, boom, boom, boom, boom!\n
+A day or two ago\n
+I thought I'd take a ride\n
+And soon Miss Fanny Bright\n
+Was seated by my side\n
+The horse was lean and lank\n
+Misfortune seemed his lot\n
+We got into a drifted bank\n
+And then we got upsot\n
 \n
-The ants go marching four by four, hurrah, hurrah!\n
-The ants go marching four by four, hurrah, hurrah!\n
-The ants go marching four by four,\n
-The little one stops to shut the door,\n
-And they all go marching down to the ground\n
-To get out of the rain, boom, boom, boom, boom!\n
+Oh, jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh\n
+Jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh yeah\n
 \n
-The ants go marching five by five, hurrah, hurrah!\n
-The ants go marching five by five, hurrah, hurrah!\n
-The ants go marching five by five,\n
-The little one stops to take a dive,\n
-And they all go marching down to the ground\n
-To get out of the rain, boom, boom, boom, boom!\n
+A day or two ago,\n
+The story I must tell\n
+I went out on the snow,\n
+And on my back I fell;\n
+A gent was riding by\n
+In a one-horse open sleigh,\n
+He laughed as there I sprawling lie,\n
+But quickly drove away.\n
 \n
-The ants go marching ten by ten, hurrah, hurrah!\n
-The ants go marching ten by ten, hurrah, hurrah!\n
-The ants go marching ten by ten,\n
-The little one stops to shout, "The end!"\n
-And they all go marching down to the ground\n
-To get out of the rain, boom, boom, boom, boom!\n
+Jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh\n
+Jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh\n
+\n
+Now the ground is white\n
+Go it while you're young,\n
+Take the girls tonight\n
+and sing this sleighing song;\n
+Just get a bobtailed bay\n
+Two forty as his speed\n
+Hitch him to an open sleigh\n
+And crack! you'll take the lead.\n
+\n
+Jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh\n
+Jingle bells, jingle bells\n
+Jingle all the way\n
+Oh, what fun it is to ride\n
+In a one horse open sleigh
 ''',
-
-  'I\'ve been working on the Railroad': '''
-I've been working on the railroad,\n
-All the live-long day.\n
-I've been working on the railroad,\n
-Just to pass the time away.\n
+//Deck the halls
+  'Deck the halls': '''
+Deck the halls with boughs of holly,\n
+Fa la la la la, la la la la.\n
+'Tis the season to be jolly,\n
+Fa la la la la, la la la la.\n
+Don we now our gay apparel,\n
+Fa la la, la la la, la la la.\n
+Toll the ancient Yuletide carol,\n
+Fa la la la la, la la la la.\n
 \n
-Can't you hear the whistle blowing?\n
-Rise up so early in the morn.\n
-Can't you hear the captain shouting,\n
-"Dinah, blow your horn!"\n
+See the blazing Yule before us,\n
+Fa la la la la, la la la la.\n
+Strike the harp and join the chorus.\n
+Fa la la la la, la la la la.\n
+Follow me in merry measure,\n
+Fa la la la la, la la la la.\n
+While I tell of Christmas treasure,\n
+Fa la la la la, la la la la.\n
 \n
-Dinah, won't you blow,\n
-Dinah, won't you blow,\n
-Dinah, won't you blow your horn?\n
-Dinah, won't you blow,\n
-Dinah, won't you blow,\n
-Dinah, won't you blow your horn?\n
-\n
-Someone's in the kitchen with Dinah,\n
-Someone's in the kitchen, I know.\n
-Someone's in the kitchen with Dinah,\n
-Strumming on the old banjo.\n
-\n
-And singing,\n
-Fee, fie, fiddly-i-o,\n
-Fee, fie, fiddly-i-o-o-o,\n
-Fee, fie, fiddly-i-o,\n
-Strumming on the old banjo.\n
-
-I've been working on the railroad,\n
-All the live-long day.\n
-I've been working on the railroad,\n
-Just to pass the time away.\n
-\n
-Can't you hear the whistle blowing?\n
-Rise up so early in the morn.\n
-Can't you hear the captain shouting,\n
-"Dinah, blow your horn!"\n
-\n
-Dinah, won't you blow,\n
-Dinah, won't you blow,\n
-Dinah, won't you blow your horn?\n
-Dinah, won't you blow,\n
-Dinah, won't you blow,\n
-Dinah, won't you blow your horn?\n
+Fast away the old year passes,\n
+Fa la la la la, la la la la.\n
+Hail the new, ye lads and lasses,\n
+Fa la la la la, la la la la.\n
+Sing we joyous, all together,\n
+Fa la la la la, la la la la.\n
+Heedless of the wind and weather,\n
+Fa la la la la, la la la la\n
 ''',
-  'Six little ducks': '''
-Six little ducks that I once knew,\n
-Fat ones, skinny ones, fair ones too.\n
-But the one little duck with the feather on his back,\n
-He led the others with his quack, quack, quack.\n
-\n
-Quack, quack, quack,\n
-He led the others with his quack, quack, quack.\n
-\n
-Down to the river they would go,\n
-Wibble wobble, wibble wobble, to and fro.\n
-But the one little duck with the feather on his back,\n
-He led the others with his quack, quack, quack.\n
-\n
-Quack, quack, quack,\n
-He led the others with his quack, quack, quack.\n
-Back from the river they would come,\n
-Wibble wobble, wibble wobble, ho, hum, hum.\n
-But the one little duck with the feather on his back,\n
-He led the others with his quack, quack, quack.\n
-\n
-Quack, quack, quack,\n
-He led the others with his quack, quack, quack.\n
-\n
-Six little ducks that I once knew,\n
-Fat ones, skinny ones, fair ones too.\n
-But the one little duck with the feather on his back,\n
-He led the others with his quack, quack, quack.\n
-\n
-Quack, quack, quack,\n
-He led the others with his quack, quack, quack.\n
+//rock-a-bye-baby
+  'Rock-a-bye-baby': '''
+Rock-a-bye baby\n
+On the treetop\n
+When the wind blows\n
+The cradle will rock,\n
+When the bough breaks\n
+The cradle will fall\n
+And down will come baby\n
+Cradle and all.\n
 ''',
-//apples and Bannanas
-  'Apples and bananas': '''
-I like to eat, eat, eat apples and bananas.\n
-I like to eat, eat, eat apples and bananas.\n
+//bingo sonng
+  'Bingo song': '''
+There was a farmer had a dog,\n
+And Bingo was his name-o.\n
+B-I-N-G-O,\n
+B-I-N-G-O,\n
+B-I-N-G-O,\n
+And Bingo was his name-o.\n
 \n
-I like to ate, ate, ate ay-ples and ba-nay-nays.\n
-I like to ate, ate, ate ay-ples and ba-nay-nays.\n
+There was a farmer had a dog,\n
+And Bingo was his name-o.\n
+(Clap)-I-N-G-O,\n
+(Clap)-I-N-G-O,\n
+(Clap)-I-N-G-O,\n
+And Bingo was his name-o.\n
 \n
-I like to eat, eat, eat ee-ples and ba-ne-nees.\n
-I like to eat, eat, eat ee-ples and ba-ne-nees.\n
+There was a farmer had a dog,\n
+And Bingo was his name-o.\n
+(Clap, Clap)-N-G-O,\n
+(Clap, Clap)-N-G-O,\n
+(Clap, Clap)-N-G-O,\n
+And Bingo was his name-o.\n
 \n
-I like to ite, ite, ite i-ples and bi-ni-nis.\n
-I like to ite, ite, ite i-ples and bi-ni-nis.\n
+There was a farmer had a dog,\n
+And Bingo was his name-o.\n
+(Clap, Clap, Clap)-G-O,\n
+(Clap, Clap, Clap)-G-O,\n
+(Clap, Clap, Clap)-G-O,\n
+And Bingo was his name-o.\n
 \n
-I like to oat, oat, oat oh-ples and bo-no-nos.\n
-I like to oat, oat, oat oh-ples and bo-no-nos.\n
-\n
-I like to oot, oot, oot oo-ples and boo-noo-noos.\n
-I like to oot, oot, oot oo-ples and boo-noo-noos.\n
-\n
-I like to eat, eat, eat apples and bananas.\n
-I like to eat, eat, eat apples and bananas.\n
+There was a farmer had a dog,\n
+And Bingo was his name-o.\n
+(Clap, Clap, Clap, Clap)-O,\n
+(Clap, Clap, Clap, Clap)-O,\n
+(Clap, Clap, Clap, Clap)-O,\n
+And Bingo was his name-o.
 ''',
-// down by the station
-
-  'Down by the station': '''
-Down by the station early in the morning,\n
-See the little pufferbellies all in a row.\n
-See the engine driver pull the little handle,\n
-Chug, chug, toot, toot, off we go!\n
+//
+  'Hush little baby': '''
+Hush, little baby, don't say a word,\n
+Mama's gonna buy you a mockingbird.\n
 \n
-Down by the station early in the morning,\n
-See the shiny track, curving away.\n
-Here is the station, here is the train,\n
-Woo-woo! Off we go on the railway!\n
+If that mockingbird won't sing,\n
+Mama's gonna buy you a diamond ring.\n
 \n
-Down by the station early in the morning,\n
-See the little pufferbellies all in a row.\n
-See the engine driver pull the little handle,\n
-Chug, chug, toot, toot, off we go!\n
+If that diamond ring turns brass,\n
+Mama's gonna buy you a looking glass.\n
 \n
-Down by the station early in the morning,\n
-See the shiny track, curving away.\n
-Here is the station, here is the train,\n
-Woo-woo! Off we go on the railway!\n
+If that looking glass gets broke,\n
+Mama's gonna buy you a billy goat.\n
 \n
-Down by the station early in the morning,\n
-See the little pufferbellies all in a row.\n
-See the engine driver pull the little handle,\n
-Chug, chug, toot, toot, off we go!\n
+If that billy goat won't pull,\n
+Mama's gonna buy you a cart and bull.\n
 \n
-Down by the station early in the morning,\n
-See the shiny track, curving away.\n
-Here is the station, here is the tranin,\n
-Woo-woo! Off we go on the railway!\n
+If that cart and bull turn over,\n
+Mama's gonna buy you a dog named Rover.\n
+\n
+If that dog named Rover won't bark,\n
+Mama's gonna buy you a horse and cart.\n
+\n
+If that horse and cart fall down,\n
+You'll still be the sweetest little baby in town.\n
 ''',
   '': ""
 };
