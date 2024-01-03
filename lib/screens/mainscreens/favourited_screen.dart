@@ -17,8 +17,8 @@ class _FavouritedState extends State<Favourited> {
     final favebox = Hive.box('favourites');
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
+    List<bool> favouritedSongs = favebox.values.cast<bool>().toList();
 
-    List favouritedSongs = favebox.keys.toList();
     return favebox.isEmpty
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,8 +35,8 @@ class _FavouritedState extends State<Favourited> {
           )
         : ListView.separated(
             itemBuilder: (context, index) {
-              int songindex = favouritedSongs[index];
-              String songTitle = songlist[songindex].songname;
+              //the index for the favourited
+              String songtitle = favebox.keyAt(index);
               return SizedBox(
                 height: screenHeight * 0.1,
                 width: screenWidth,
@@ -81,7 +81,7 @@ class _FavouritedState extends State<Favourited> {
                               scrollDirection: Axis.horizontal,
                               children: [
                                 Text(
-                                  songTitle,
+                                  songtitle,
                                   style: TextStyle(
                                       fontSize: screenWidth * 0.05,
                                       color: Colors.white),
@@ -92,12 +92,18 @@ class _FavouritedState extends State<Favourited> {
                           const Spacer(),
                           IconButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => screensList[index],
-                                ),
-                              );
+                              //create a song index
+                              int songindex = screensList.indexWhere(
+                                  (item) => item.title == songtitle);
+                              if (songindex != -1) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        screensList[songindex],
+                                  ),
+                                );
+                              }
                             },
                             icon: SvgPicture.asset(
                               'assets/images/play_fab.svg',
@@ -116,9 +122,8 @@ class _FavouritedState extends State<Favourited> {
               );
             },
             separatorBuilder: (context, index) => SizedBox(
-              height: screenHeight * 0.05,
-            ),
-            itemCount: favouritedSongs.length,
-          );
+                  height: screenHeight * 0.05,
+                ),
+            itemCount: favouritedSongs.length);
   }
 }
