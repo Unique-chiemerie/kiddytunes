@@ -18,9 +18,7 @@ class _FavouritedState extends State<Favourited> {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
-    List<int> favouritedIndices =
-        favebox.keys.map((key) => int.parse(key)).toList();
-
+    List favouritedSongs = favebox.keys.toList();
     return favebox.isEmpty
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,7 +35,7 @@ class _FavouritedState extends State<Favourited> {
           )
         : ListView.separated(
             itemBuilder: (context, index) {
-              int songindex = favouritedIndices[index];
+              int songindex = favouritedSongs[index];
               String songTitle = songlist[songindex].songname;
               return SizedBox(
                 height: screenHeight * 0.1,
@@ -120,7 +118,7 @@ class _FavouritedState extends State<Favourited> {
             separatorBuilder: (context, index) => SizedBox(
               height: screenHeight * 0.05,
             ),
-            itemCount: favouritedIndices.length,
+            itemCount: favouritedSongs.length,
           );
   }
 }
