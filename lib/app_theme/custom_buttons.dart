@@ -23,14 +23,16 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
       onPressed: () {
         if (isplaying = true) {
           setState(() {
-            player.play(
-              AssetSource('alphabet song.mp3'),
-            );
+            true == false;
           });
+          player.play(
+            AssetSource('baby-shark.mp3'),
+          );
         } else {
           setState(() {
-            player.stop();
+            false == true;
           });
+          player.stop();
         }
       },
       shape: const CircleBorder(eccentricity: 1),
