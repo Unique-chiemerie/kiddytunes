@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
+import '';
 
 class Fab extends StatefulWidget {
   const Fab({super.key});
@@ -11,6 +12,7 @@ class Fab extends StatefulWidget {
 
 class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
   bool isplaying = true;
+  final player = Placeholder();
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +21,15 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
 
     return FloatingActionButton(
       onPressed: () {
-        setState(() {
-          isplaying = !isplaying;
-        });
+        if (isplaying = true) {
+          setState(() {
+            player.play(AssetSource('alphabet song.mp3'));
+          });
+        } else {
+          setState(() {
+            player.stop();
+          });
+        }
       },
       shape: const CircleBorder(eccentricity: 1),
       backgroundColor: Theme.of(context).primaryColor,

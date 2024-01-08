@@ -95,15 +95,16 @@ class _FavouritedState extends State<Favourited> {
                               //create a song index
                               int songindex = screensList.indexWhere(
                                   (item) => item.title == songtitle);
-                              if (songindex != -1) {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        screensList[songindex],
-                                  ),
-                                );
-                              }
+                              setState(() {
+                                if (songindex != -1) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            screensList[songindex]),
+                                  );
+                                }
+                              });
                             },
                             icon: SvgPicture.asset(
                               'assets/images/play_fab.svg',
