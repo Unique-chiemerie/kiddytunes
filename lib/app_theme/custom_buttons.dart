@@ -21,19 +21,16 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
 
     return FloatingActionButton(
       onPressed: () {
-        // if (isplaying = true) {
-        //   setState(() {
-        //     true == false;
-        //     player.play(
-        //       AssetSource('baby-shark.mp3'),
-        //     );
-        //   });
-        // } else {
-        //   player.stop();
-        // }
-        player.play(
-          AssetSource('alphabetsong.mp3'),
-        );
+        if (isplaying = true) {
+          setState(() {
+            true == false;
+            player.play(
+              AssetSource('alphabetsong.mp3'),
+            );
+          });
+        } else {
+          player.stop();
+        }
       },
       shape: const CircleBorder(eccentricity: 1),
       backgroundColor: Theme.of(context).primaryColor,
