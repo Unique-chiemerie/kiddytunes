@@ -26,7 +26,7 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
             true == false;
           });
           player.play(
-            AssetSource('baby-shark.mp3'),
+            AssetSource('songs/baby-shark.mp3'),
           );
         } else {
           setState(() {

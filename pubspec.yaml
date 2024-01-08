@@ -95,34 +95,34 @@ flutter:
     - assets/animations/heart_animation.json
     - assets/animations/Ghost_notfound.json
     - assets/animations/orange_search.json
-    - assets/songs/alphabet song.mp3
-    - assets/songs/Baa_black sheep.mp3
-    - assets/songs/baby-shark.mp3
-    - assets/songs/Bingo-Song-Singing-Bell.mp3
-    - assets/songs/Deck-the-halls-Singing-Bell.mp3
-    - assets/songs/Five-little-monkeys-Singing-Bell.mp3
-    - assets/songs/For he jolly.mp3
-    - assets/songs/Head-Shoulders-Knees-and-Toes.mp3
-    - assets/songs/Humpty-Dumpty.mp3
-    - assets/songs/Hush-Little-Baby-Singing-Bell.mp3
-    - assets/songs/I-m-a-little-teapot-Singing-Bell.mp3
-    - assets/songs/Itsy-Bitsy-Spider-Singing-Bell.mp3
-    - assets/songs/Jack and jill.mp3
-    - assets/songs/Jingle-Bells-Singing-Bell.mp3
-    - assets/songs/Joy to the world_afrobeat.mp3
-    - assets/songs/London bridge.mp3
-    - assets/songs/Mary had a little lamb.mp3
-    - assets/songs/old-macdonald-had-a-farm.mp3
-    - assets/songs/Pop-Goes-the-weasel-Singing-Bell.mp3
-    - assets/songs/Rain Rain go away.mp3
-    - assets/songs/Row your boat.mp3
-    - assets/songs/she'll be coming round the mountain.mp3
-    - assets/songs/silent_Night.mp3
-    - assets/songs/Ten-in-the-Bed-Singing-Bell.mp3
-    - assets/songs/The-more-we-get-together-Singing-Bell.mp3
-    - assets/songs/this_old_man.mp3
-    - assets/songs/Twinkle_little_star.mp3
-    - assets/songs/wheels on the bus.mp3
+    - songs/alphabet song.mp3
+    - songs/Baa_black sheep.mp3
+    - songs/baby-shark.mp3
+    - songs/Bingo-Song-Singing-Bell.mp3
+    - songs/Deck-the-halls-Singing-Bell.mp3
+    - songs/Five-little-monkeys-Singing-Bell.mp3
+    - songs/For he jolly.mp3
+    - songs/Head-Shoulders-Knees-and-Toes.mp3
+    - songs/Humpty-Dumpty.mp3
+    - songs/Hush-Little-Baby-Singing-Bell.mp3
+    - songs/I-m-a-little-teapot-Singing-Bell.mp3
+    - songs/Itsy-Bitsy-Spider-Singing-Bell.mp3
+    - songs/Jack and jill.mp3
+    - songs/Jingle-Bells-Singing-Bell.mp3
+    - songs/Joy to the world_afrobeat.mp3
+    - songs/London bridge.mp3
+    - songs/Mary had a little lamb.mp3
+    - songs/old-macdonald-had-a-farm.mp3
+    - songs/Pop-Goes-the-weasel-Singing-Bell.mp3
+    - songs/Rain Rain go away.mp3
+    - songs/Row your boat.mp3
+    - songs/she'll be coming round the mountain.mp3
+    - songs/silent_Night.mp3
+    - songs/Ten-in-the-Bed-Singing-Bell.mp3
+    - songs/The-more-we-get-together-Singing-Bell.mp3
+    - songs/this_old_man.mp3
+    - songs/Twinkle_little_star.mp3
+    - songs/wheels on the bus.mp3
     
 
     

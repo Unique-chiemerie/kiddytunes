@@ -75,9 +75,10 @@ class _HomescreenState extends State<Homescreen> {
 
   @override
   Widget build(BuildContext context) {
+    final favbox = Hive.box('favourites');
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-    final favourites = songlist.length.toInt();
+    final favourites = favbox.values.length;
     final namebox = Hive.box('names');
 
     return SafeArea(
