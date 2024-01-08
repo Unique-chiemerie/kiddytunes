@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import '';
+import 'package:audioplayers/audioplayers.dart';
 
 class Fab extends StatefulWidget {
   const Fab({super.key});
@@ -12,7 +12,7 @@ class Fab extends StatefulWidget {
 
 class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
   bool isplaying = true;
-  final player = Placeholder();
+  final player = AudioPlayer();
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,9 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
       onPressed: () {
         if (isplaying = true) {
           setState(() {
-            player.play(AssetSource('alphabet song.mp3'));
+            player.play(
+              AssetSource('alphabet song.mp3'),
+            );
           });
         } else {
           setState(() {
