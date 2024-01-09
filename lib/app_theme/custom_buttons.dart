@@ -11,8 +11,13 @@ class Fab extends StatefulWidget {
 }
 
 class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
-  bool isplaying = true;
   final player = AudioPlayer();
+  bool isplaying = true;
+  @override
+  void dispose() {
+    player.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +26,17 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
 
     return FloatingActionButton(
       onPressed: () {
-        if (isplaying = true) {
-          setState(() {
-            true == false;
+        setState(() {
+          if (isplaying == true) {
+            isplaying = false;
             player.play(
-              AssetSource('alphabetsong.mp3'),
+              AssetSource('Twinkle_little_star.mp3'),
             );
-          });
-        } else {
-          player.stop();
-        }
+          } else {
+            player.stop();
+            isplaying = true;
+          }
+        });
       },
       shape: const CircleBorder(eccentricity: 1),
       backgroundColor: Theme.of(context).primaryColor,
