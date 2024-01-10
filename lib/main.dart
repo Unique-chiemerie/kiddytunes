@@ -8,7 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
   //initialize hive
   await Hive.initFlutter();
-  //define the boxn
+  //define the boxn0
   // ignore: unused_local_variable
   var nameBox = await Hive.openBox('names');
   //the favourites local DB

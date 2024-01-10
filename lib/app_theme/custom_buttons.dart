@@ -16,6 +16,19 @@ class Fab extends StatefulWidget {
 class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
   final player = AudioPlayer();
   bool isplaying = true;
+
+  @override
+  void initState() {
+    //it will initialise the function
+    super.initState();
+    //if player completes song, let it stop playing
+    player.onPlayerComplete.listen((event) {
+      setState(() {
+        isplaying = false;
+      });
+    });
+  }
+
   @override
   void dispose() {
     player.dispose();
