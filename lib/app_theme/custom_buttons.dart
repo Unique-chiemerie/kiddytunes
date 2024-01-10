@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kiddytunes/data/song_stringpath.dart';
 import 'package:lottie/lottie.dart';
 import 'package:audioplayers/audioplayers.dart';
 
@@ -23,14 +26,14 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-
+    final randomsongs = songstringpath[Random().nextInt(4)];
     return FloatingActionButton(
       onPressed: () {
         setState(() {
           if (isplaying == true) {
             isplaying = false;
             player.play(
-              AssetSource('Twinkle_little_star.mp3'),
+              AssetSource(randomsongs),
             );
           } else {
             player.stop();

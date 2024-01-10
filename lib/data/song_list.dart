@@ -14,131 +14,132 @@ class SongmetaData {
 
 List<SongmetaData> songlist = [
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Twinkle little star'] ?? 'Lyrics not found',
     songname: 'Twinkle little star',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Baby Shark'] ?? 'Lyrics not found',
     songname: 'Baby Shark',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Silent night'] ?? 'Lyrics not found',
     songname: 'Silent night',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Joy to the World'] ?? 'Lyrics not found',
     songname: 'Joy to the World',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Baa,Baa black sheep'] ?? 'Lyrics not found',
     songname: 'Baa,Baa black sheep',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Mary had a little lamb'] ?? 'Lyrics not found',
     songname: 'Mary had a little lamb',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Old mcDonald had a farm'] ?? 'Lyrics not found',
     songname: 'Old mcDonald had a farm',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['if you\'re happy and you know it'] ?? 'Lyrics not found',
     songname: 'if you\'re happy and you know it',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Row Row Row your boat'] ?? 'Lyrics not found',
     songname: 'Row Row Row your boat',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Head, Shoulders, Knees, and Toes'] ?? 'Lyrics not found',
     songname: 'Head, Shoulders, Knees, and Toes',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Itsy bitsy spider'] ?? 'Lyrics not found',
     songname: 'Itsy bitsy spider',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Alphabet song'] ?? 'Lyrics not found',
     songname: 'Alphabet song',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Rain Rain GO away'] ?? 'Lyrics not found',
     songname: 'Rain Rain GO away',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Humpty dumpty'] ?? 'Lyrics not found',
     songname: 'Humpty dumpty',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['The wheels on the bus'] ?? 'Lyrics not found',
     songname: 'The wheels on the bus',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['London bridge is falling down'] ?? 'Lyrics not found',
     songname: 'London bridge is falling down',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['For he\'s a jolly good fellow'] ?? 'Lyrics not found',
     songname: 'For he\'s a jolly good fellow',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Jack and Jill'] ?? 'Lyrics not found',
     songname: 'Jack and Jill',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['This old man'] ?? 'Lyrics not found',
     songname: 'This old man',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['She\'ll be coming\'round the mountain'] ??
+        'Lyrics not found',
     songname: 'She\'ll be coming\'round the mountain',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Pop goes the weasel'] ?? 'Lyrics not found',
     songname: 'Pop goes the weasel',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['The more we get together'] ?? 'Lyrics not found',
     songname: 'The more we get together',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Five little monkeys'] ?? 'Lyrics not found',
     songname: 'Five little monkeys',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Ten in the bed'] ?? 'Lyrics not found',
     songname: 'Ten in the bed',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['I\'m a little teapot'] ?? 'Lyrics not found',
     songname: 'I\'m a little teapot',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Baby bumblebee'] ?? 'Lyrics not found',
     songname: 'Baby bumblebee',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Jingle bells'] ?? 'Lyrics not found',
     songname: 'Jingle bells',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Deck the halls'] ?? 'Lyrics not found',
     songname: 'Deck the halls',
   ),
   SongmetaData(
-    lyrics: ' ',
+    lyrics: lyricsMap['Rock-a-bye-baby'] ?? 'Lyrics not found',
     songname: 'Rock-a-bye-baby',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Bingo song'] ?? 'Lyrics not found',
     songname: 'Bingo song',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap['Hush little baby'] ?? 'Lyrics not found',
     songname: 'Hush little baby',
   ),
   SongmetaData(
-    lyrics: '',
+    lyrics: lyricsMap[''] ?? 'Lyrics not found',
     songname: '',
   ),
 ];

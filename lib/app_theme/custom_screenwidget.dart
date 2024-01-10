@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kiddytunes/app_theme/custom_buttons.dart';
 
-class Customcard extends StatelessWidget {
+class Customcard extends StatefulWidget {
   final String title;
   final String lyrics;
   const Customcard({
@@ -11,6 +11,11 @@ class Customcard extends StatelessWidget {
     required this.lyrics,
   });
 
+  @override
+  State<Customcard> createState() => _CustomcardState();
+}
+
+class _CustomcardState extends State<Customcard> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -52,7 +57,7 @@ class Customcard extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              title,
+                              widget.title,
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyLarge!
@@ -80,7 +85,7 @@ class Customcard extends StatelessWidget {
                               width: screenWidth * 0.8,
                               child: SingleChildScrollView(
                                 child: Text(
-                                  lyrics,
+                                  widget.lyrics,
                                   style: TextStyle(
                                       fontSize: screenWidth * 0.05,
                                       color: Colors.white),
