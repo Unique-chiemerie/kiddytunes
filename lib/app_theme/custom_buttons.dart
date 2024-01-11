@@ -15,24 +15,24 @@ class Fab extends StatefulWidget {
 
 class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
   final player = AudioPlayer();
-  bool isplaying = true;
+  bool isplaying = false;
 
   @override
   void initState() {
-    //it will initialise the function
     super.initState();
-    //if player completes song, let it stop playing
-    player.onPlayerComplete.listen((event) {
-      setState(() {
-        isplaying = false;
-      });
+    player.onPlayerStateChanged.listen((state) {
+      if (state == PlayerState.completed) {
+        setState(() {
+          isplaying = false;
+        });
+      }
     });
   }
 
   @override
   void dispose() {
-    player.dispose();
     super.dispose();
+    player.dispose();
   }
 
   @override
@@ -45,27 +45,27 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
         setState(() {
           if (isplaying == true) {
             isplaying = false;
+            player.stop();
+          } else {
+            isplaying = true;
             player.play(
               AssetSource(randomsongs),
             );
-          } else {
-            player.stop();
-            isplaying = true;
           }
         });
       },
       shape: const CircleBorder(eccentricity: 1),
       backgroundColor: Theme.of(context).primaryColor,
       child: isplaying
-          ? SvgPicture.asset(
-              'assets/images/white_fab.svg',
-              height: screenHeight * 0.04,
-              width: screenWidth * 0.04,
-            )
-          : Icon(
+          ? Icon(
               Icons.pause,
               color: Colors.white,
               size: screenWidth * 0.12,
+            )
+          : SvgPicture.asset(
+              'assets/images/white_fab.svg',
+              height: screenHeight * 0.04,
+              width: screenWidth * 0.04,
             ),
     );
   }
