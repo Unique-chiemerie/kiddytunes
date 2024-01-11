@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kiddytunes/app_theme/custom_buttons.dart';
+import 'package:kiddytunes/data/song_stringpath.dart';
 
 class Customcard extends StatefulWidget {
   final String title;
@@ -118,7 +119,10 @@ class _CustomcardState extends State<Customcard> {
             );
           },
         ),
-        floatingActionButton: const Fab(),
+        floatingActionButton: Fab(
+          songpathMap: songPathMap,
+          titlekey: widget.title,
+        ),
       ),
     );
   }

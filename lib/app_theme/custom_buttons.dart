@@ -1,13 +1,12 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:kiddytunes/data/song_stringpath.dart';
 import 'package:lottie/lottie.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class Fab extends StatefulWidget {
-  const Fab({super.key});
+  final Map<String, String> songpathMap;
+  final String titlekey;
+  const Fab({super.key, required this.songpathMap, required this.titlekey});
 
   @override
   State<Fab> createState() => _FabState();
@@ -39,7 +38,8 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    final randomsongs = songstringpath[Random().nextInt(4)];
+    //make the songs rhyme with the matching songs using a map
+
     return FloatingActionButton(
       onPressed: () {
         setState(() {
@@ -49,7 +49,9 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
           } else {
             isplaying = true;
             player.play(
-              AssetSource(randomsongs),
+              AssetSource(
+                  //map the song title to the string path that will be provided here
+                  widget.songpathMap[widget.titlekey] ?? ''),
             );
           }
         });
