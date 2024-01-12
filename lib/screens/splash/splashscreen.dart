@@ -18,7 +18,7 @@ class _SplashscreenState extends State<Splashscreen> {
   void loader() {
     Future.delayed(
       const Duration(seconds: 7),
-      () => Navigator.push(
+      () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => const OnboardOne(),
