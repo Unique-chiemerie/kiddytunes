@@ -5,6 +5,7 @@ import 'package:hive/hive.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class Allsongsscreen extends StatefulWidget {
@@ -14,7 +15,26 @@ class Allsongsscreen extends StatefulWidget {
   State<Allsongsscreen> createState() => _AllsongsscreenState();
 }
 
-class _AllsongsscreenState extends State<Allsongsscreen> {
+class _AllsongsscreenState extends State<Allsongsscreen>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _animcntrl;
+  @override
+  void initState() {
+    super.initState();
+    _animcntrl = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        milliseconds: 500,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _animcntrl.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -49,6 +69,9 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                       favebox.put(filtered, true); // add to favorites
                     }
                   });
+                  favebox.containsKey(filtered)
+                      ? _animcntrl.forward()
+                      : _animcntrl.reverse();
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -57,18 +80,19 @@ class _AllsongsscreenState extends State<Allsongsscreen> {
                   ),
                   height: double.infinity,
                   width: screenWidth * 0.2,
-                  // child: const Center(
-                  //   child: Likebutton(),
-                  // ),
-                  child: favebox.containsKey(filtered)
-                      ? const Icon(
-                          Icons.thumb_up_rounded,
-                          color: Colors.red,
-                        )
-                      : const Icon(
-                          Icons.thumb_up_rounded,
-                          color: Colors.grey,
-                        ),
+                  // child: favebox.containsKey(filtered)
+                  //     ? const Icon(
+                  //         Icons.thumb_up_rounded,
+                  //         color: Colors.red,
+                  //       )
+                  //     : const Icon(
+                  //         Icons.thumb_up_rounded,
+                  //         color: Colors.grey,
+                  //       ),
+                  child: Lottie.asset(
+                    'assets/animations/heart_animation.json',
+                    controller: _animcntrl,
+                  ),
                 ),
               ),
               SizedBox(

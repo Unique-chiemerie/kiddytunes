@@ -73,54 +73,55 @@ class _FabState extends State<Fab> with SingleTickerProviderStateMixin {
   }
 }
 
-class Likebutton extends StatefulWidget {
-  const Likebutton({super.key});
+// class Likebutton extends StatefulWidget {
+//   const Likebutton({super.key});
 
-  @override
-  State<Likebutton> createState() => _LikebuttonState();
-}
+//   @override
+//   State<Likebutton> createState() => _LikebuttonState();
+// }
 
-class _LikebuttonState extends State<Likebutton>
-    with SingleTickerProviderStateMixin {
-  bool isliked = false;
-  late final AnimationController _animcntrl;
+// class _LikebuttonState extends State<Likebutton>
+//     with SingleTickerProviderStateMixin {
+//   bool isliked = false;
+//   late final AnimationController _animcntrl;
 
-  @override
-  void initState() {
-    super.initState();
-    _animcntrl = AnimationController(
-      vsync: this,
-      duration: const Duration(
-        milliseconds: 500,
-      ),
-    );
-  }
+//   @override
+//   void initState() {
+//     super.initState();
+//     _animcntrl = AnimationController(
+//       vsync: this,
+//       duration: const Duration(
+//         milliseconds: 500,
+//       ),
+//     );
+//   }
 
-  @override
-  void dispose() {
-    super.dispose();
-    _animcntrl.dispose();
-  }
+//   @override
+//   void dispose() {
+//     super.dispose();
+//     _animcntrl.dispose();
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        if (isliked == false) {
-          isliked = true;
-          _animcntrl.forward();
-        } else {
-          isliked = false;
-          _animcntrl.reverse();
-        }
-      },
-      child: Lottie.asset(
-        'assets/animations/heart_animation.json',
-        controller: _animcntrl,
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return GestureDetector(
+//       onTap: () {
+//         // if (isliked == false) {
+//         //   isliked = true;
+//         //   _animcntrl.forward();
+//         // } else {
+//         //   isliked = false;
+//         //   _animcntrl.reverse();
+//         // }
+
+//       },
+//       child: Lottie.asset(
+//         'assets/animations/heart_animation.json',
+//         controller: _animcntrl,
+//       ),
+//     );
+//   }
+// }
 
 class Notfound extends StatefulWidget {
   const Notfound({super.key});
