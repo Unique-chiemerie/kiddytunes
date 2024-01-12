@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive/hive.dart';
+import 'package:kiddytunes/app_theme/custom_buttons.dart';
 import 'package:kiddytunes/data/song_list.dart';
 
 // import 'package:kiddytunes/app_theme/custom_buttons.dart';
@@ -23,6 +24,7 @@ class _FavouritedState extends State<Favourited> {
         ? Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const Favouriteanimation(),
               Center(
                 child: Text(
                   'No favourites yet',

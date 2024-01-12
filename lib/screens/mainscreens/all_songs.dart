@@ -74,26 +74,30 @@ class _AllsongsscreenState extends State<Allsongsscreen>
                       : _animcntrl.reverse();
                 },
                 child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    color: Theme.of(context).primaryColor.withOpacity(0.8),
-                  ),
-                  height: double.infinity,
-                  width: screenWidth * 0.2,
-                  // child: favebox.containsKey(filtered)
-                  //     ? const Icon(
-                  //         Icons.thumb_up_rounded,
-                  //         color: Colors.red,
-                  //       )
-                  //     : const Icon(
-                  //         Icons.thumb_up_rounded,
-                  //         color: Colors.grey,
-                  //       ),
-                  child: Lottie.asset(
-                    'assets/animations/heart_animation.json',
-                    controller: _animcntrl,
-                  ),
-                ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Theme.of(context).primaryColor.withOpacity(0.8),
+                    ),
+                    height: double.infinity,
+                    width: screenWidth * 0.2,
+                    // child: favebox.containsKey(filtered)
+                    //     ? const Icon(
+                    //         Icons.thumb_up_rounded,
+                    //         color: Colors.red,
+                    //       )
+                    //     : const Icon(
+                    //         Icons.thumb_up_rounded,
+                    //         color: Colors.grey,
+                    //       ),
+                    child: favebox.containsKey(filtered)
+                        ? Lottie.asset(
+                            'assets/animations/heart_animation.json',
+                            controller: _animcntrl,
+                          )
+                        : Lottie.asset(
+                            'assets/animations/heart_animation.json',
+                            controller: _animcntrl,
+                          )),
               ),
               SizedBox(
                 width: screenWidth * 0.05,
