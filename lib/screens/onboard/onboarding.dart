@@ -92,7 +92,7 @@ class _OnboardOneState extends State<OnboardOne> {
                                 height: 52,
                                 child: MaterialButton(
                                   onPressed: () {
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) => const Avatar(),

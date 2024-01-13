@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:kiddytunes/screens/avatar_name/name_entry.dart';
+import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Avatar extends StatefulWidget {
@@ -120,6 +121,7 @@ class _AvatarState extends State<Avatar> {
                           setState(() {
                             selectedindex = _controller.page?.round() ?? 0;
                           });
+                          _disablePref();
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
@@ -127,7 +129,6 @@ class _AvatarState extends State<Avatar> {
                                   Namesscreen(selectedindex: selectedindex),
                             ),
                           );
-                          _disablePref();
                         },
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -146,6 +147,6 @@ class _AvatarState extends State<Avatar> {
               ),
             ),
           )
-        : Namesscreen(selectedindex: selectedindex);
+        : const Homescreen();
   }
 }
