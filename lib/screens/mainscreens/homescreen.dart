@@ -140,7 +140,7 @@ class _HomescreenState extends State<Homescreen> {
                     ),
                     //the name of the user saved on the DB
                     Text(
-                      namebox.get(1),
+                      namebox.isEmpty ? '' : namebox.get(1),
                       style: Theme.of(context)
                           .textTheme
                           .bodyLarge!

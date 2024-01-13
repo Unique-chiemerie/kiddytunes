@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kiddytunes/screens/avatar_name/avatar_select.dart';
-import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 import 'package:kiddytunes/screens/onboard/page1.dart';
 import 'package:kiddytunes/screens/onboard/page2.dart';
 import 'package:kiddytunes/screens/onboard/page3.dart';
@@ -92,12 +91,15 @@ class _OnboardOneState extends State<OnboardOne> {
                                 width: 197,
                                 height: 52,
                                 child: MaterialButton(
-                                  onPressed: () => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const Avatar(),
-                                    ),
-                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const Avatar(),
+                                      ),
+                                    );
+                                    _disablePref();
+                                  },
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
@@ -124,7 +126,6 @@ class _OnboardOneState extends State<OnboardOne> {
                                         duration:
                                             const Duration(milliseconds: 300),
                                         curve: Curves.easeIn);
-                                    _disablePref();
                                   },
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
@@ -154,6 +155,6 @@ class _OnboardOneState extends State<OnboardOne> {
               ],
             ),
           )
-        : const Homescreen();
+        : const Avatar();
   }
 }
