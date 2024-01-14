@@ -576,7 +576,7 @@ Goodnight!
 A, B, C, D, E, F, G,\n
 H, I, J, K, L, M, N, O, P,\n
 Q, R, S, T, U, V,\n
-, Y, and Z.\n
+x,Y, and Z.\n
 \n
 Now I know my ABCs,\n
 Next time, won't you sing with me?

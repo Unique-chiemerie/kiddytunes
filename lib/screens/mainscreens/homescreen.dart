@@ -81,6 +81,8 @@ class _HomescreenState extends State<Homescreen> {
     final screenWidth = MediaQuery.of(context).size.width;
     final favourites = favbox.values.length;
     final namebox = Hive.box('names');
+    final avatarbox = Hive.box('Avatar');
+    // int avatarint = avatarbox.get(1);
 
     return SafeArea(
       child: Scaffold(
@@ -118,7 +120,7 @@ class _HomescreenState extends State<Homescreen> {
                             child: CircleAvatar(
                               backgroundColor: Theme.of(context).primaryColor,
                               child: SvgPicture.asset(
-                                avatarstrings[1],
+                                avatarstrings[selected],
                                 height: 50,
                                 width: 50,
                               ),

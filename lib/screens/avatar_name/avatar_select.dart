@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
 import 'package:kiddytunes/screens/avatar_name/name_entry.dart';
 // import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
@@ -41,6 +42,7 @@ class _AvatarState extends State<Avatar> {
 
   @override
   Widget build(BuildContext context) {
+    final avatarbox = Hive.box('Avatar');
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: SingleChildScrollView(
@@ -117,6 +119,7 @@ class _AvatarState extends State<Avatar> {
                 height: 52,
                 child: MaterialButton(
                   onPressed: () {
+                    avatarbox.put(1, selectedindex);
                     setState(() {
                       selectedindex = _controller.page?.round() ?? 0;
                     });

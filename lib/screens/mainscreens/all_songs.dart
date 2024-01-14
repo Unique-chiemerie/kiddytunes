@@ -5,7 +5,6 @@ import 'package:hive/hive.dart';
 import 'package:kiddytunes/app_theme/custom_screenwidget.dart';
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
-import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class Allsongsscreen extends StatefulWidget {
@@ -74,30 +73,24 @@ class _AllsongsscreenState extends State<Allsongsscreen>
                       : _animcntrl.reverse();
                 },
                 child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: Theme.of(context).primaryColor.withOpacity(0.8),
-                    ),
-                    height: double.infinity,
-                    width: screenWidth * 0.2,
-                    // child: favebox.containsKey(filtered)
-                    //     ? const Icon(
-                    //         Icons.thumb_up_rounded,
-                    //         color: Colors.red,
-                    //       )
-                    //     : const Icon(
-                    //         Icons.thumb_up_rounded,
-                    //         color: Colors.grey,
-                    //       ),
-                    child: favebox.containsKey(filtered)
-                        ? Lottie.asset(
-                            'assets/animations/heart_animation.json',
-                            controller: _animcntrl,
-                          )
-                        : Lottie.asset(
-                            'assets/animations/heart_animation.json',
-                            controller: _animcntrl,
-                          )),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Theme.of(context).primaryColor.withOpacity(0.8),
+                  ),
+                  height: double.infinity,
+                  width: screenWidth * 0.2,
+                  child: favebox.containsKey(filtered)
+                      ? Icon(
+                          Icons.thumb_up_rounded,
+                          color: Colors.red,
+                          size: screenWidth * 0.05,
+                        )
+                      : Icon(
+                          Icons.thumb_up_rounded,
+                          color: Colors.white,
+                          size: screenWidth * 0.05,
+                        ),
+                ),
               ),
               SizedBox(
                 width: screenWidth * 0.05,
