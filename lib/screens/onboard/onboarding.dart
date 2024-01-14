@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiddytunes/screens/avatar_name/avatar_select.dart';
+import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 import 'package:kiddytunes/screens/onboard/page1.dart';
 import 'package:kiddytunes/screens/onboard/page2.dart';
 import 'package:kiddytunes/screens/onboard/page3.dart';
@@ -92,11 +93,10 @@ class _OnboardOneState extends State<OnboardOne> {
                                 height: 52,
                                 child: MaterialButton(
                                   onPressed: () {
-                                    Navigator.pushReplacement(
+                                    Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => const Avatar(),
-                                      ),
+                                          builder: (context) => const Avatar()),
                                     );
                                     _disablePref();
                                   },
@@ -155,6 +155,6 @@ class _OnboardOneState extends State<OnboardOne> {
               ],
             ),
           )
-        : const Avatar();
+        : const Homescreen();
   }
 }

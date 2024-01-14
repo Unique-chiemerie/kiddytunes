@@ -121,7 +121,7 @@ class _AvatarState extends State<Avatar> {
                       selectedindex = _controller.page?.round() ?? 0;
                     });
 
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
