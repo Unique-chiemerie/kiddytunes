@@ -131,6 +131,7 @@ class _AvatarState extends State<Avatar> {
                             Namesscreen(selectedindex: selectedindex),
                       ),
                     );
+                    print(avatarbox.get(1));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
