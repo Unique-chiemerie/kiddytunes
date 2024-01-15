@@ -8,6 +8,7 @@ import 'package:custom_sliding_segmented_control/custom_sliding_segmented_contro
 import 'package:kiddytunes/data/song_list.dart';
 import 'package:kiddytunes/screens/mainscreens/all_songs.dart';
 import 'package:kiddytunes/screens/mainscreens/favourited_screen.dart';
+import 'package:kiddytunes/screens/mainscreens/settings.dart';
 import 'package:provider/provider.dart';
 
 //create  a provider for songs
@@ -149,17 +150,23 @@ class _HomescreenState extends State<Homescreen> {
                           .copyWith(fontSize: screenWidth * 0.06),
                     ),
                     SizedBox(
-                      width: screenWidth * 0.20,
+                      width: screenWidth * 0.15,
                     ),
-                    const Spacer(),
                     //the music svg
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 60, right: 10),
-                      child: SizedBox(
-                        height: 30,
-                        width: 30,
-                        child: SvgPicture.asset(
-                          'assets/images/music_icon.svg',
+                      padding: EdgeInsets.only(
+                          bottom: screenHeight * 0.1, left: screenWidth * 0.05),
+                      child: IconButton(
+                        onPressed: () {
+                          showModalBottomSheet(
+                            context: context,
+                            builder: (context) => const Settingsscreen(),
+                          );
+                        },
+                        icon: Icon(
+                          Icons.settings,
+                          color: Colors.white,
+                          size: screenWidth * 0.07,
                         ),
                       ),
                     ),
