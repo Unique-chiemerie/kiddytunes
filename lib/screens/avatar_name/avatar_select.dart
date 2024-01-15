@@ -15,30 +15,6 @@ class Avatar extends StatefulWidget {
 class _AvatarState extends State<Avatar> {
   int selectedindex = 0;
   final PageController _controller = PageController(initialPage: 0);
-//   late SharedPreferences _pref;
-//   bool onboard = true;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _loadPrefs();
-//   }
-
-// //function to load screen
-//   Future<void> _loadPrefs() async {
-//     _pref = await SharedPreferences.getInstance();
-//     setState(() {
-//       onboard = _pref.getBool('showonboard') ?? true;
-//     });
-//   }
-
-// //function to disable
-//   Future<void> _disablePref() async {
-//     await _pref.setBool('showonboard', false);
-//     setState(() {
-//       onboard = false;
-//     });
-//   }
 
   @override
   Widget build(BuildContext context) {
@@ -119,9 +95,9 @@ class _AvatarState extends State<Avatar> {
                 height: 52,
                 child: MaterialButton(
                   onPressed: () {
-                    avatarbox.put(1, selectedindex);
                     setState(() {
                       selectedindex = _controller.page?.round() ?? 0;
+                      avatarbox.put(1, selectedindex);
                     });
 
                     Navigator.pushReplacement(
@@ -131,7 +107,6 @@ class _AvatarState extends State<Avatar> {
                             Namesscreen(selectedindex: selectedindex),
                       ),
                     );
-                    print(avatarbox.get(1));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
