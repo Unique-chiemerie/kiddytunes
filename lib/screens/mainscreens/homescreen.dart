@@ -83,7 +83,9 @@ class _HomescreenState extends State<Homescreen> {
     final favourites = favbox.values.length;
     final namebox = Hive.box('names');
     final avatarbox = Hive.box('Avatar');
-    int avatarint = avatarbox.get(1);
+    final avatarint = avatarbox.get(
+      1.toInt(),
+    );
 
     return SafeArea(
       child: Scaffold(
@@ -121,7 +123,8 @@ class _HomescreenState extends State<Homescreen> {
                             child: CircleAvatar(
                               backgroundColor: Theme.of(context).primaryColor,
                               child: SvgPicture.asset(
-                                avatarstrings[avatarint],
+                                avatarstrings[
+                                    avatarbox.isEmpty ? 1 : avatarint],
                                 height: 50,
                                 width: 50,
                               ),
@@ -142,12 +145,18 @@ class _HomescreenState extends State<Homescreen> {
                       width: screenWidth * 0.05,
                     ),
                     //the name of the user saved on the DB
-                    Text(
-                      namebox.isEmpty ? '' : namebox.get(1),
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyLarge!
-                          .copyWith(fontSize: screenWidth * 0.06),
+                    SizedBox(
+                      width: screenWidth * 0.2,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Text(
+                          namebox.isEmpty ? '' : namebox.get(1),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(fontSize: screenWidth * 0.06),
+                        ),
+                      ),
                     ),
                     SizedBox(
                       width: screenWidth * 0.15,

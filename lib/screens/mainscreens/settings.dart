@@ -43,7 +43,7 @@ class _SettingsscreenState extends State<Settingsscreen> {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    int avatarint = avatarbox.get(1);
+    final avatarint = avatarbox.get(1);
     return ListView(
       controller: scrolly,
       children: [
@@ -61,7 +61,7 @@ class _SettingsscreenState extends State<Settingsscreen> {
                 child: CircleAvatar(
                   backgroundColor: Theme.of(context).primaryColor,
                   child: SvgPicture.asset(
-                    avatarstrings[avatarint],
+                    avatarstrings[avatarbox.isEmpty ? 1 : avatarint],
                     height: screenHeight * 0.2,
                     width: screenWidth * 0.2,
                   ),
@@ -110,7 +110,9 @@ class _SettingsscreenState extends State<Settingsscreen> {
                 child: IconButton(
                   onPressed: () {
                     Navigator.pop(context);
-                    addname();
+                    setState(() {
+                      addname();
+                    });
                   },
                   icon: Icon(
                     Icons.check,
