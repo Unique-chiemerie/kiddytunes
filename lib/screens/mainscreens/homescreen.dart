@@ -13,6 +13,16 @@ import 'package:provider/provider.dart';
 
 //create  a provider for songs
 class Songlistprovider extends ChangeNotifier {
+// the username provider
+  String _userName = '';
+
+  String get userName => _userName;
+
+  void updateUserName(String name) {
+    _userName = name;
+    notifyListeners();
+  }
+
   List<String> filteredsongs = List.from(songsString);
   void updateFilteredList(String query) {
     if (query.isEmpty) {
@@ -81,7 +91,7 @@ class _HomescreenState extends State<Homescreen> {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     final favourites = favbox.values.length;
-    final namebox = Hive.box('names');
+    // final namebox = Hive.box('names');
     final avatarbox = Hive.box('Avatar');
     final avatarint = avatarbox.get(
       1.toInt(),
@@ -150,7 +160,8 @@ class _HomescreenState extends State<Homescreen> {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Text(
-                          namebox.isEmpty ? '' : namebox.get(1),
+                          // namebox.isEmpty ? 'User' : namebox.get(1),
+                          Songlistprovider().userName,
                           style: Theme.of(context)
                               .textTheme
                               .bodyLarge!

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive/hive.dart';
 import 'package:kiddytunes/data/avatarlis.dart';
+import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
+import 'package:provider/provider.dart';
 // import 'package:kiddytunes/screens/mainscreens/homescreen.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 
@@ -16,10 +18,13 @@ class Namesscreen extends StatefulWidget {
 class _NamesscreenState extends State<Namesscreen> {
   final TextEditingController _texty = TextEditingController();
 
-//function to add to local Hive Db
-  void addname() {
+  void addName() {
     final nameBox = Hive.box('names');
+    final songListProvider =
+        Provider.of<Songlistprovider>(context, listen: false);
+
     nameBox.put(1, _texty.text);
+    songListProvider.updateUserName(_texty.text);
   }
 
   @override
@@ -87,7 +92,7 @@ class _NamesscreenState extends State<Namesscreen> {
         splashColor: Colors.white,
         onPressed: () {
           Navigator.pushReplacementNamed(context, '/home');
-          addname();
+          addName();
         },
         child: SvgPicture.asset('assets/images/next.svg'),
       ),
