@@ -15,30 +15,6 @@ class Namesscreen extends StatefulWidget {
 
 class _NamesscreenState extends State<Namesscreen> {
   final TextEditingController _texty = TextEditingController();
-//   late SharedPreferences _pref;
-//   bool onboard = true;
-
-//   @override
-//   void initState() {
-//     super.initState();
-//     _loadPrefs();
-//   }
-
-// //function to load screen
-//   Future<void> _loadPrefs() async {
-//     _pref = await SharedPreferences.getInstance();
-//     setState(() {
-//       onboard = _pref.getBool('showonboard') ?? true;
-//     });
-//   }
-
-// //function to disable
-//   Future<void> _disablePref() async {
-//     await _pref.setBool('showonboard', false);
-//     setState(() {
-//       onboard = false;
-//     });
-//   }
 
 //function to add to local Hive Db
   void addname() {
