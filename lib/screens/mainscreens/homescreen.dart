@@ -162,7 +162,7 @@ class _HomescreenState extends State<Homescreen> {
                         child: Consumer<Songlistprovider>(
                           builder: (context, songListProvider, child) => Text(
                             // songListProvider.userName,
-                            namebox.get(1),
+                            namebox.isEmpty ? 'User' : namebox.get(1),
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyLarge!
