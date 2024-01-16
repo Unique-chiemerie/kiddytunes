@@ -93,7 +93,7 @@ class _SettingsscreenState extends State<Settingsscreen> {
                           color: Colors.black,
                         ),
                     textAlign: TextAlign.justify,
-                    cursorColor: Theme.of(context).primaryColor,
+                    cursorColor: Colors.white,
                     decoration: InputDecoration(
                       fillColor: Theme.of(context).primaryColor,
                       filled: true,

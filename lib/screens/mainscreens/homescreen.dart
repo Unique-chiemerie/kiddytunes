@@ -87,11 +87,8 @@ class _HomescreenState extends State<Homescreen> {
 
   @override
   Widget build(BuildContext context) {
-    final favbox = Hive.box('favourites');
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-    final favourites = favbox.values.length;
-    // final namebox = Hive.box('names');
     final avatarbox = Hive.box('Avatar');
     final avatarint = avatarbox.get(
       1.toInt(),
@@ -142,12 +139,17 @@ class _HomescreenState extends State<Homescreen> {
                           ),
                         ),
                         Center(
-                          child: Text(
-                            'Favourites: $favourites',
-                            style: TextStyle(
-                                fontSize: screenWidth * 0.03,
-                                fontWeight: FontWeight.bold),
-                          ),
+                          child: Consumer<Songlistprovider>(
+                              builder: (context, songListProvider, child) {
+                            final favbox = Hive.box('favourites');
+                            final favourites = favbox.values.length;
+                            return Text(
+                              'Favourites: $favourites',
+                              style: TextStyle(
+                                  fontSize: screenWidth * 0.03,
+                                  fontWeight: FontWeight.bold),
+                            );
+                          }),
                         ),
                       ],
                     ),
@@ -159,13 +161,14 @@ class _HomescreenState extends State<Homescreen> {
                       width: screenWidth * 0.2,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
-                        child: Text(
-                          // namebox.isEmpty ? 'User' : namebox.get(1),
-                          Songlistprovider().userName,
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge!
-                              .copyWith(fontSize: screenWidth * 0.06),
+                        child: Consumer<Songlistprovider>(
+                          builder: (context, songListProvider, child) => Text(
+                            songListProvider.userName,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge!
+                                .copyWith(fontSize: screenWidth * 0.06),
+                          ),
                         ),
                       ),
                     ),
@@ -175,7 +178,7 @@ class _HomescreenState extends State<Homescreen> {
                     //the music svg
                     Padding(
                       padding: EdgeInsets.only(
-                          bottom: screenHeight * 0.1, left: screenWidth * 0.05),
+                          bottom: screenHeight * 0.1, left: screenWidth * 0.1),
                       child: IconButton(
                         onPressed: () {
                           showModalBottomSheet(
