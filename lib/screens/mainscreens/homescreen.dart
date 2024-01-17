@@ -156,7 +156,7 @@ class _HomescreenState extends State<Homescreen> {
                     ),
                     //the name of the user saved on the DB
                     SizedBox(
-                      width: screenWidth * 0.2,
+                      width: screenWidth * 0.25,
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Consumer<Songlistprovider>(
@@ -172,7 +172,7 @@ class _HomescreenState extends State<Homescreen> {
                       ),
                     ),
                     SizedBox(
-                      width: screenWidth * 0.15,
+                      width: screenWidth * 0.1,
                     ),
                     //the music svg
                     Padding(
