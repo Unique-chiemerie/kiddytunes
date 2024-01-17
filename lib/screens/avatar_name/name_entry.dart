@@ -91,8 +91,28 @@ class _NamesscreenState extends State<Namesscreen> {
         elevation: 0,
         splashColor: Colors.white,
         onPressed: () {
-          Navigator.pushReplacementNamed(context, '/home');
           addName();
+          Navigator.push(
+            context,
+            PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  const Homescreen(),
+              transitionDuration: const Duration(milliseconds: 500),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                const begin = Offset(1, 0);
+                const end = Offset.zero;
+                var tween = Tween(begin: begin, end: end).chain(
+                  CurveTween(curve: Curves.easeIn),
+                );
+                var offset = animation.drive(tween);
+                return SlideTransition(
+                  position: offset,
+                  child: child,
+                );
+              },
+            ),
+          );
         },
         child: SvgPicture.asset('assets/images/next.svg'),
       ),
