@@ -202,7 +202,7 @@ class _HomescreenState extends State<Homescreen> {
             //the search bar for songs
             //call the implemented search function here:
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(7),
               child: SizedBox(
                 height: screenHeight * 0.08,
                 width: screenWidth * 0.3,
@@ -304,7 +304,7 @@ class _HomescreenState extends State<Homescreen> {
             ),
 
             const SizedBox(
-              height: 30,
+              height: 15,
             ),
             //the sized box for the songs
             Padding(
