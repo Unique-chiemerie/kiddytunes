@@ -247,11 +247,13 @@ class _HomescreenState extends State<Homescreen> {
                   1: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Songs',
-                        style: TextStyle(
-                          fontSize: screenWidth * 0.05,
-                          fontWeight: FontWeight.bold,
+                      Center(
+                        child: Text(
+                          'Songs',
+                          style: TextStyle(
+                            fontSize: screenWidth * 0.05,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -271,11 +273,13 @@ class _HomescreenState extends State<Homescreen> {
                   2: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        'Favourites',
-                        style: TextStyle(
-                          fontSize: screenWidth * 0.045,
-                          fontWeight: FontWeight.bold,
+                      Center(
+                        child: Text(
+                          'Favourites',
+                          style: TextStyle(
+                            fontSize: screenWidth * 0.045,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       SvgPicture.asset(
@@ -310,7 +314,7 @@ class _HomescreenState extends State<Homescreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                height: screenHeight * 0.6,
+                height: screenHeight * 0.5,
                 width: double.infinity,
                 child: buildscreen(),
               ),
