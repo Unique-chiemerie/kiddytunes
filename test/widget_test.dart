@@ -1,32 +1,33 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:kiddytunes/screens/splash/splashscreen.dart';
+import 'package:kiddytunes/app_theme/custom_buttons.dart';
+import 'package:kiddytunes/data/song_stringpath.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(
-      const Splashscreen(),
-    );
-
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+  testWidgets(
+    'Testing my FAB for functions',
+    (WidgetTester tester) async {
+      //trigger the button,
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            floatingActionButton:
+                Fab(songpathMap: songPathMap, titlekey: 'Twinkle little star'),
+          ),
+        ),
+      );
+      //verify the initial state of the button is not playing
+      expect(find.byIcon(Icons.pause), findsNothing);
+      //pump the floating action button
+      await tester.tap(find.byType(FloatingActionButton));
+      await tester.pump();
+      //verify that  on tap of the fab icon changes/it's in playing state
+      expect(find.byIcon(Icons.pause), findsOneWidget);
+      // tap the again to see that it returns to the normal state
+      await tester.tap(find.byType(FloatingActionButton));
+      await tester.pump();
+      //verify the icon changes
+      expect(find.byIcon(Icons.pause), findsNothing);
+    },
+  );
 }
